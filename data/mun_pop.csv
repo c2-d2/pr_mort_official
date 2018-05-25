@@ -1,0 +1,904 @@
+﻿barrio,municipio,pop
+   Adjuntas, Adjuntas ,4406
+   Capáez, Adjuntas,1054
+   Garzas, Adjuntas,1337
+   Guayabo Dulce, Adjuntas ,140
+   Guayo, Adjuntas ,853
+   Guilarte, Adjuntas ,1176
+   Juan González, Adjuntas ,865
+   Limaní, Adjuntas ,276
+   Pellejas, Adjuntas ,553
+   Portillo, Adjuntas ,606
+   Portugués, Adjuntas ,476
+   Saltillo, Adjuntas ,2664
+   Tanamá, Adjuntas ,1193
+   Vegas Abajo, Adjuntas ,605
+   Vegas Arriba, Adjuntas,1207
+   Yahuecas, Adjuntas,1396
+   Yayales, Adjuntas ,676
+   Aguada, Aguada ,1324
+   Asomante, Aguada ,3177
+   Atalaya, Aguada ,3108
+   Carrizal, Aguada ,970
+   Cerro Gordo, Aguada,3018
+   Cruces, Aguada ,1632
+   Espinar, Aguada ,1281
+   Guanábano, Aguada ,749
+   Guaniquilla, Aguada ,2663
+   Guayabo, Aguada ,3273
+   Jagüey, Aguada,1995
+   Lagunas, Aguada ,2810
+   Mal Paso, Aguada,2483
+   Mamey, Aguada ,2400
+   Marías, Aguada ,1997
+   Naranjo, Aguada,3292
+   Piedras Blancas, Aguada ,4635
+   Río Grande, Aguada ,1152
+   Aguacate, Aguadilla ,1525
+   Aguadilla, Aguadilla ,3627
+   Arenales, Aguadilla ,1983
+   Borinquen, Aguadilla ,7415
+   Caimital Alto, Aguadilla ,3989
+   Caimital Bajo, Aguadilla,4487
+   Camaceyes, Aguadilla ,12547
+   Ceiba Alta, Aguadilla ,667
+   Ceiba Baja, Aguadilla ,2356
+   Corrales, Aguadilla ,7659
+   Guerrero, Aguadilla ,3406
+   Maleza Alta, Aguadilla ,1800
+   Maleza Baja, Aguadilla ,1887
+   Montaña, Aguadilla ,4068
+   Palmar, Aguadilla ,1743
+   Victoria, Aguadilla ,1790
+Barrio Pueblo, Aguas Buenas ,1711
+   Bairoa, Aguas Buenas ,2444
+   Bayamoncito, Aguas Buenas ,1738
+   Cagüitas, Aguas Buenas ,2664
+   Jagüeyes, Aguas Buenas ,1976
+   Juan Asencio, Aguas Buenas ,2819
+   Mula, Aguas Buenas ,3842
+   Mulita, Aguas Buenas ,266
+   Sonadora, Aguas Buenas ,3191
+   Sumidero, Aguas Buenas ,8008
+   Aibonito, Aibonito ,3539
+   Algarrobo, Aibonito ,383
+   Asomante, Aibonito ,2966
+   Caonillas, Aibonito ,1424
+   Cuyón, Aibonito ,977
+   Llanos, Aibonito ,6840
+   Pasto, Aibonito ,4184
+   Plata, Aibonito ,1724
+   Robles, Aibonito ,3863
+   Añasco, Añasco ,912
+   Añasco Abajo, Añasco ,6
+   Añasco Arriba, Añasco ,1570
+   Caguabo, Añasco ,847
+   Caracol, Añasco ,1869
+   Carreras, Añasco ,3780
+   Casey Abajo, Añasco ,103
+   Casey Arriba, Añasco ,549
+   Cerro Gordo, Añasco ,497
+   Cidra, Añasco ,326
+   Corcovada, Añasco ,627
+   Dagüey, Añasco ,1626
+   Espino, Añasco ,1407
+   Hatillo, Añasco ,1269
+   Humatas, Añasco ,756
+   Marías, Añasco ,4658
+   Miraflores, Añasco ,567
+   Ovejas, Añasco ,1549
+   Piñales, Añasco ,2875
+   Playa, Añasco ,1498
+   Quebrada Larga, Añasco ,1532
+   Río Arriba, Añasco ,138
+   Río Cañas, Añasco ,300
+   Arecibo, Arecibo ,8488
+   Arenalejos, Arecibo ,3064
+   Arrozal, Arecibo ,1445
+   Cambalache, Arecibo ,40
+   Carreras, Arecibo ,1226
+   Domingo Ruíz, Arecibo ,3153
+   Dominguito, Arecibo ,4895
+   Esperanza, Arecibo ,1882
+   Factor, Arecibo ,8001
+   Garrochales, Arecibo ,2433
+   Hato Abajo, Arecibo ,19699
+   Hato Arriba, Arecibo ,8495
+   Hato Viejo, Arecibo ,2045
+   Islote, Arecibo ,5665
+   Miraflores, Arecibo ,5863
+   Río Arriba, Arecibo ,858
+   Sabana Hoyos, Arecibo ,10745
+   Santana, Arecibo,5253
+   Tanamá, Arecibo ,3190
+   Ancones, Arroyo ,5719
+   Arroyo, Arroyo ,1206
+   Guásimas, Arroyo ,4030
+   Palmas, Arroyo ,3789
+   Pitahaya, Arroyo ,3242
+   Yaurel, Arroyo ,1589
+   Barceloneta, Barceloneta ,435
+   Florida Afuera, Barceloneta ,16061
+   Garrochales, Barceloneta ,4542
+   Palmas Altas, Barceloneta ,3778
+   Barrancas, Barranquitas ,5234
+   Barranquitas, Barranquitas ,2695
+   Cañabón, Barranquitas ,2654
+   Helechal, Barranquitas ,4073
+   Honduras, Barranquitas ,1823
+   Palo Hincado, Barranquitas ,4587
+   Quebrada Grande, Barranquitas ,3217
+   Quebradillas, Barranquitas ,6035
+   Bayamón, Bayamón ,4746
+   Buena Vista, Bayamón ,15518
+   Cerro Gordo, Bayamón ,31508
+   Dajaos, Bayamón ,2831
+   Guaraguao Abajo, Bayamón ,8123
+   Guaraguao Arriba, Bayamón ,1832
+   Hato Tejas, Bayamón ,41851
+   Juan Sánchez, Bayamón ,22951
+   Minillas, Bayamón ,39540
+   Nuevo, Bayamón ,2965
+   Pájaros, Bayamón,30194
+   Santa Olaya, Bayamón ,6057
+   Bajura, Cabo Rojo ,2423
+   Boquerón, Cabo Rojo ,5373
+   Cabo Rojo, Cabo Rojo ,1078
+   Guanajibo, Cabo Rojo ,4905
+   Llanos Costa, Cabo Rojo ,3571
+   Llanos Tuna, Cabo Rojo ,6183
+   Miradero, Cabo Rojo,15521
+   Monte Grande, Cabo Rojo ,7227
+   Pedernales, Cabo Rojo ,4636
+   Bairoa, Caguas ,19258
+   Beatriz, Caguas ,4353
+   Borinquen, Caguas ,7953
+   Caguas, Caguas,22406
+   Cañabón, Caguas ,11310
+   Cañaboncito, Caguas ,27464
+   Río Cañas, Caguas ,9683
+   San Antonio, Caguas ,2224
+   San Salvador, Caguas ,3089
+   Tomás de Castro, Caguas ,19414
+   Turabo, Caguas ,15739
+   Abra Honda, Camuy ,1943
+   Camuy, Camuy ,3354
+   Camuy Arriba, Camuy ,3290
+   Cibao, Camuy ,1374
+   Ciénagas, Camuy ,1554
+   Membrillo, Camuy ,3459
+   Piedra Gorda, Camuy ,1846
+   Puente, Camuy ,6876
+   Puertos, Camuy ,1330
+   Quebrada, Camuy ,3813
+   Santiago, Camuy ,428
+   Yeguada, Camuy ,2581
+   Zanja, Camuy ,3311
+   Canóvanas, Canóvanas ,22420
+   Canóvanas, Canóvanas ,4060
+   Cubuy, Canóvanas ,1841
+   Hato Puerco, Canóvanas ,7379
+   Lomas, Canóvanas ,5336
+   Torrecilla Alta, Canóvanas ,6612
+   Barrazas, Carolina ,4301
+   Buena Vista, Carolina,29303
+   Cacao, Carolina ,4214
+   Cangrejo Arriba, Carolina ,17041
+   Canovanillas, Carolina ,11681
+   Carolina, Carolina ,1201
+   Carruzos, Carolina ,2506
+   Cedro, Carolina ,1943
+   Martín González, Carolina ,24662
+   Sabana Abajo, Carolina ,55600
+   San Antón, Carolina ,13578
+   Santa Cruz, Carolina ,1927
+   Trujillo Bajo, Carolina ,8805
+   Cataño, Cataño,4283
+   Palmas, Cataño ,23857
+   Beatriz, Cayey ,3027
+   Cayey, Cayey ,15298
+   Cedro, Cayey ,372
+   Cercadillo, Cayey ,820
+   Culebras Alto, Cayey ,252
+   Culebras Bajo, Cayey ,238
+   Farallón, Cayey ,451
+   Guavate, Cayey ,1870
+   Jájome Alto, Cayey ,641
+   Jájome Bajo, Cayey ,519
+   Lapa, Cayey ,186
+   Matón Abajo, Cayey ,926
+   Matón Arriba, Cayey ,961
+   Monte Llano, Cayey ,3302
+   Pasto Viejo, Cayey ,555
+   Pedro Avila, Cayey ,125
+   Piedras, Cayey ,195
+   Quebrada Arriba, Cayey ,1451
+   Rincón, Cayey ,6764
+   Sumido, Cayey ,802
+   Toíta, Cayey ,5281
+   Vegas, Cayey ,4083
+   Ceiba, Ceiba ,3677
+   Chupacallos, Ceiba ,2036
+   Daguao, Ceiba ,235
+   Guayacán, Ceiba ,2
+   Machos, Ceiba ,3567
+   Quebrada Seca, Ceiba ,1415
+   Río Abajo, Ceiba ,884
+   Saco, Ceiba ,1815
+   Ciales, Ciales ,1009
+   Cialitos, Ciales ,1449
+   Cordillera, Ciales ,2348
+   Frontón, Ciales ,2228
+   Hato Viejo, Ciales ,2442
+   Jaguas, Ciales ,4545
+   Pesas, Ciales ,2361
+   Pozas, Ciales ,1430
+   Toro Negro, Ciales ,970
+   Arenas, Cidra ,6123
+   Bayamón, Cidra ,5995
+   Beatriz, Cidra ,3095
+   Ceiba, Cidra ,3850
+   Certenejas, Cidra ,6049
+   Cidra, Cidra,1064
+   Honduras, Cidra ,1705
+   Monte Llano, Cidra ,984
+   Rabanal, Cidra ,4228
+   Rincón, Cidra ,4332
+   Río Abajo, Cidra ,1097
+   Salto, Cidra ,176
+   Sud, Cidra ,3714
+   Toíta, Cidra ,1068
+   Coamo, Coamo,6685
+   Coamo Arriba, Coamo ,391
+   Cuyón, Coamo ,3077
+   Hayales, Coamo ,1221
+   Los Llanos, Coamo ,4862
+   Palmarejo, Coamo,3650
+   Pasto, Coamo ,5540
+   Pedro García, Coamo ,666
+   Pulguillas, Coamo ,1205
+   San Ildefonso, Coamo ,11427
+   Santa Catalina, Coamo ,1788
+   Cedrito, Comerío ,1191
+   Cejas, Comerío ,829
+   Comerío, Comerío ,3657
+   Doña Elena, Comerío,3252
+   Naranjo, Comerío ,1915
+   Palomas, Comerío ,4719
+   Piñas, Comerío ,1718
+   Río Hondo, Comerío ,2300
+   Vega Redonda, Comerío ,1197
+   Abras, Corozal ,2262
+   Cibuco, Corozal ,5387
+   Corozal, Corozal,2631
+   Cuchillas, Corozal ,1551
+   Dos Bocas, Corozal ,3060
+   Magueyes, Corozal ,363
+   Maná, Corozal ,2093
+   Negros, Corozal ,1398
+   Padilla, Corozal ,3653
+   Palmarejo, Corozal ,6068
+   Palmarito, Corozal ,2227
+   Palos Blancos, Corozal ,3458
+   Pueblo, Corozal ,2991
+   Culebra, Culebra,462
+   Flamenco, Culebra ,1048
+   Fraile, Culebra,42
+   Playa Sardinas I, Culebra ,186
+   Playa Sardinas II, Culebra ,64
+   San Isidro, Culebra ,16
+   Dorado, Dorado ,780
+   Espinosa, Dorado ,4534
+   Higuillar, Dorado ,25785
+   Maguayo, Dorado ,4496
+   Mameyal, Dorado ,11
+   Río Lajas, Dorado ,2559
+   Cabezas, Fajardo ,1339
+   Demajagua, Fajardo ,1430
+   Fajardo, Fajardo ,13709
+   Florencio, Fajardo ,4145
+   Naranjo, Fajardo ,349
+   Quebrada Fajardo, Fajardo ,9789
+   Quebrada Vueltas, Fajardo ,3665
+   Río Arriba, Fajardo ,1377
+   Sardinera, Fajardo ,1190
+   Florida Adentro, Florida ,12680
+   Arena, Guánica ,96
+   Caño, Guánica ,1788
+   Carenero, Guánica ,2670
+   Ciénaga, Guánica ,2231
+   Ensenada, Guánica ,1705
+   Guánica, Guánica ,3514
+   Montalva, Guánica ,3181
+   Susúa Baja, Guánica ,4242
+   Algarrobo, Guayama ,6959
+   Caimital, Guayama ,4124
+   Carite, Guayama ,1210
+   Carmen, Guayama ,619
+   Guamaní, Guayama ,1455
+   Guayama, Guayama ,16891
+   Jobos, Guayama ,8286
+   Machete, Guayama ,3846
+   Palmas, Guayama ,709
+   Pozo Hondo, Guayama ,1263
+   Barrero, Guayanilla ,839
+   Boca, Guayanilla ,1089
+   Cedro, Guayanilla ,0
+   Consejo, Guayanilla ,886
+   Guayanilla, Guayanilla ,3757
+   Indios, Guayanilla ,2647
+   Jagua Pasto, Guayanilla ,108
+   Jaguas, Guayanilla ,1413
+   Llano, Guayanilla ,773
+   Macaná, Guayanilla ,1483
+   Magas, Guayanilla,3436
+   Pasto, Guayanilla ,327
+   Playa, Guayanilla ,1186
+   Quebrada Honda, Guayanilla ,390
+   Quebradas, Guayanilla ,2425
+   Rufina, Guayanilla,220
+   Sierra Baja, Guayanilla ,602
+   Camarones, Guaynabo ,5626
+   Frailes, Guaynabo ,32050
+   Guaraguao, Guaynabo ,4178
+   Guaynabo, Guaynabo ,4008
+   Hato Nuevo, Guaynabo ,4114
+   Mamey, Guaynabo ,3103
+   Pueblo Viejo, Guaynabo ,23816
+   Río, Guaynabo ,2791
+   Santa Rosa, Guaynabo ,16904
+   Sonadora, Guaynabo ,1334
+   Celada, Gurabo,3160
+   Gurabo, Gurabo ,1509
+   Hato Nuevo, Gurabo ,9345
+   Jaguar, Gurabo ,735
+   Jaguas, Gurabo ,2083
+   Mamey, Gurabo ,4714
+   Masa, Gurabo ,1522
+   Navarro, Gurabo ,10561
+   Quebrada Infierno, Gurabo ,773
+   Rincón, Gurabo ,10967
+   Aibonito, Hatillo ,2816
+   Bayaney, Hatillo,3550
+   Buena Vista, Hatillo ,2490
+   Campo Alegre, Hatillo ,5210
+   Capáez, Hatillo,4231
+   Carrizales, Hatillo ,8066
+   Corcovado, Hatillo ,4617
+   Hatillo, Hatillo ,3806
+   Hatillo, Hatillo ,3117
+   Naranjito, Hatillo ,4050
+   Benavente, Hormigueros ,40
+   Guanajibo, Hormigueros ,5959
+   Hormigueros, Hormigueros ,4358
+Barrio Pueblo, Hormigueros ,1204
+   Jaguitas, Hormigueros ,1384
+   Lavadero, Hormigueros ,4305
+   Antón Ruíz, Humacao ,3496
+   Buena Vista, Humacao ,3519
+   Candelero Abajo, Humacao ,5135
+   Candelero Arriba, Humacao ,3596
+   Cataño, Humacao ,3387
+   Collores, Humacao ,2770
+   Humacao, Humacao ,3862
+   Mabú, Humacao ,8045
+   Mambiche, Humacao ,2387
+   Mariana, Humacao ,3230
+   Punta Santiago, Humacao ,4723
+   Río Abajo, Humacao ,7495
+   Tejas, Humacao ,6821
+   Arenales Altos, Isabela ,4101
+   Arenales Bajos, Isabela ,3591
+   Bajura, Isabela ,663
+   Bejucos, Isabela,5055
+   Coto, Isabela ,3575
+   Galateo Alto, Isabela ,1314
+   Galateo Bajo, Isabela ,1961
+   Guayabos, Isabela ,1475
+   Guerrero, Isabela ,3552
+   Isabela, Isabela ,7826
+   Jobos, Isabela ,3446
+   Llanadas, Isabela ,2315
+   Mora, Isabela ,4682
+   Planas, Isabela ,2075
+   Coabey, Jayuya ,2166
+   Collores, Jayuya ,1666
+   Jauca, Jayuya ,116
+   Jayuya, Jayuya ,1222
+   Jayuya Abajo, Jayuya ,3367
+   Mameyes Arriba, Jayuya ,2240
+   Pica, Jayuya ,153
+   Río Grande, Jayuya ,879
+   Saliente, Jayuya ,649
+   Veguitas, Jayuya ,3685
+   Zamas, Jayuya ,499
+   Amuelas, Juana Díaz ,4575
+   Callabo, Juana Díaz ,2237
+   Capitanejo, Juana Díaz ,4350
+   Cintrona, Juana Díaz ,3226
+   Collores, Juana Díaz ,2073
+   Emajagual, Juana Díaz ,0
+   Guayabal, Juana Díaz ,5835
+   Jacaguas, Juana Díaz ,3957
+   Juana Díaz, Juana Díaz ,3977
+   Lomas, Juana Díaz ,938
+   Río Cañas Abajo, Juana Díaz ,2848
+   Río Cañas Arriba, Juana Díaz ,2165
+   Sabana Llana, Juana Díaz ,8896
+   Tijeras, Juana Díaz ,5670
+   Caimito, Juncos ,2423
+   Ceiba Norte, Juncos ,9755
+   Ceiba Sur, Juncos ,5482
+   Gurabo Abajo, Juncos ,4857
+   Gurabo Arriba, Juncos ,569
+   Juncos, Juncos ,2464
+   Lirios, Juncos ,5646
+   Mamey, Juncos ,4310
+   Valenciano Abajo, Juncos ,3582
+   Valenciano Arriba, Juncos ,1202
+   Candelaria, Lajas ,3599
+   Costa, Lajas ,1628
+   Lajas, Lajas ,2694
+   Lajas, Lajas ,564
+   Lajas Arriba, Lajas ,2456
+   Llanos, Lajas ,675
+   Palmarejo, Lajas ,3750
+   Parguera, Lajas,2082
+   París, Lajas ,968
+   Plata, Lajas ,2620
+   Sabana Yeguas, Lajas ,3114
+   Santa Rosa, Lajas ,1603
+   Bartolo, Lares ,2035
+   Buenos Aires, Lares ,2291
+   Callejones, Lares ,4575
+   Espino, Lares ,1695
+   Lares, Lares ,3405
+Barrio Pueblo, Lares ,2690
+   La Torre, Lares ,1574
+   Mirasol, Lares ,938
+   Pezuela, Lares ,474
+   Piletas, Lares ,5671
+   Pueblo, Lares,4838
+   Río Prieto, Lares ,567
+   Alto Sano, Las Marías,179
+   Anones, Las Marías,1262
+   Bucarabones, Las Marías ,616
+   Buena Vista, Las Marías ,615
+   Cerrote, Las Marías ,496
+   Chamorro, Las Marías ,98
+   Espino, Las Marías ,181
+   Furnias, Las Marías ,1474
+   Las Marías, Las Marías ,262
+   Maravilla Este, Las Marías ,748
+   Maravilla Norte, Las Marías ,580
+   Maravilla Sur, Las Marías ,1934
+   Naranjales, Las Marías,558
+   Palma Escrita, Las Marías ,507
+   Purísima Concepción, Las Marías ,87
+   Río Cañas, Las Marías ,284
+   Boquerón, Las Piedras ,1824
+   Ceiba, Las Piedras ,2500
+   Collores, Las Piedras ,4710
+   El Río, Las Piedras ,5096
+   Las Piedras, Las Piedras ,1500
+   Montones, Las Piedras ,9332
+   Quebrada Arenas, Las Piedras ,4225
+   Tejas, Las Piedras ,9488
+   Canóvanas, Loíza ,6981
+   Loíza, Loíza ,3875
+   Medianía Alta, Loíza ,8019
+   Medianía Baja, Loíza ,8781
+   Torrecilla Baja, Loíza,2404
+   Torrecilla Alta, Loíza,2404
+   Juan Martín, Luquillo ,874
+   Luquillo, Luquillo,1028
+   Mameyes I, Luquillo ,2319
+   Mata de Plátano, Luquillo ,8972
+   Pitahaya, Luquillo ,4523
+   Sabana, Luquillo ,2352
+   Bajura Adentro, Manatí ,2436
+   Bajura Afuera, Manatí ,677
+   Coto Norte, Manatí ,11250
+   Coto Sur, Manatí ,8184
+   Manatí, Manatí ,5746
+   Río Arriba Poniente, Manatí ,1857
+   Río Arriba Saliente, Manatí ,3592
+   Tierras Nuevas Poniente, Manatí ,3614
+   Tierras Nuevas Saliente, Manatí ,6757
+   Bucarabones, Maricao ,164
+   Indiera Alta, Maricao ,1369
+   Indiera Baja, Maricao ,518
+   Indiera Fría, Maricao ,449
+   Maricao, Maricao ,716
+   Maricao Afuera, Maricao ,2076
+   Montoso, Maricao,984
+   Calzada, Maunabo ,1082
+   Emajagua, Maunabo ,4538
+   Lizas, Maunabo ,762
+   Matuyas Alto, Maunabo,288
+   Matuyas Bajo, Maunabo ,327
+   Maunabo, Maunabo ,317
+   Palo Seco, Maunabo ,1270
+   Quebrada Arenas, Maunabo ,1667
+   Talante, Maunabo ,1381
+   Tumbao, Maunabo,593
+   Algarrobos, Mayagüez ,4383
+   Bateyes, Mayagüez ,1156
+   Guanajibo, Mayagüez,6029
+   Isla de Mona e Islote Monito, Mayagüez ,5
+   Juan Alonso, Mayagüez ,1158
+   Leguísamo, Mayagüez ,2096
+   Limón, Mayagüez ,1377
+   Malezas, Mayagüez,1072
+   Mayagüez, Mayagüez ,26903
+   Mayagüez Arriba, Mayagüez ,5341
+   Miradero, Mayagüez ,5724
+   Montoso, Mayagüez ,1049
+   Naranjales, Mayagüez ,1109
+   Quebrada Grande, Mayagüez ,5558
+   Quemado, Mayagüez ,2518
+   Río Cañas Abajo, Mayagüez ,2459
+   Río Cañas Arriba, Mayagüez ,1354
+   Río Hondo, Mayagüez ,3640
+   Rosario, Mayagüez ,1403
+   Sábalos, Mayagüez ,10741
+   Sabanetas, Mayagüez ,4005
+   Aceitunas, Moca ,3098
+   Capá, Moca ,3747
+   Centro, Moca ,1056
+   Cerro Gordo, Moca ,2478
+   Cruz, Moca ,1127
+   Cuchillas, Moca ,4352
+   Marías, Moca ,1766
+   Moca, Moca ,1735
+   Naranjo, Moca ,2875
+   Plata, Moca ,2797
+   Pueblo, Moca ,6364
+   Rocha, Moca ,4004
+   Voladoras, Moca ,4710
+   Barahona, Morovis ,5244
+   Cuchillas, Morovis ,2333
+   Fránquez, Morovis ,4583
+   Monte Llano, Morovis ,2948
+   Morovis, Morovis ,895
+   Morovis Norte, Morovis ,3546
+   Morovis Sud, Morovis ,4208
+   Pasto, Morovis ,767
+   Perchas, Morovis ,1336
+   Río Grande, Morovis ,594
+   San Lorenzo, Morovis ,1209
+   Torrecillas, Morovis ,623
+   Unibón, Morovis ,3853
+   Vaga, Morovis ,471
+   Daguao, Naguabo ,2273
+   Duque, Naguabo ,2425
+   Húcares, Naguabo ,2918
+   Maizales, Naguabo,1913
+   Mariana, Naguabo ,2074
+   Naguabo, Naguabo ,1514
+   Peña Pobre, Naguabo ,4131
+   Río, Naguabo ,5350
+   Río Blanco, Naguabo ,3412
+   Santiago y Lima, Naguabo ,710
+   Achiote, Naranjito ,3919
+   Anones, Naranjito ,4976
+   Cedro Abajo, Naranjito ,4627
+   Cedro Arriba, Naranjito ,3876
+   Guadiana, Naranjito ,3978
+   Lomas, Naranjito ,3865
+   Naranjito, Naranjito ,1157
+   Nuevo, Naranjito ,4004
+   Ala de la Piedra, Orocovis ,419
+   Barros, Orocovis ,1917
+   Bauta Abajo, Orocovis ,1516
+   Bauta Arriba, Orocovis ,913
+   Bermejales, Orocovis ,500
+   Botijas, Orocovis ,3720
+   Cacaos, Orocovis ,878
+   Collores, Orocovis ,152
+   Damián Abajo, Orocovis ,754
+   Damián Arriba, Orocovis ,913
+   Gato, Orocovis ,2072
+   Mata de Cañas, Orocovis ,538
+   Orocovis, Orocovis ,3658
+   Orocovis, Orocovis ,682
+   Pellejas, Orocovis ,577
+   Sabana, Orocovis ,976
+   Saltos, Orocovis ,3238
+   Apeadero, Patillas ,699
+   Bajo, Patillas ,1530
+   Cacao Alto, Patillas ,2449
+   Cacao Bajo, Patillas ,1437
+   Egozcue, Patillas ,52
+   Guardarraya, Patillas ,1603
+   Jacaboa, Patillas ,1278
+   Jagual, Patillas,363
+   Mamey, Patillas ,1380
+   Marín, Patillas ,890
+   Mulas, Patillas ,439
+   Muñoz Rivera, Patillas ,673
+   Patillas, Patillas ,2279
+   Pollos, Patillas ,3146
+   Quebrada Arriba, Patillas ,711
+   Ríos, Patillas ,348
+   Barreal, Peñuelas,272
+   Coto, Peñuelas ,1467
+   Cuebas, Peñuelas,449
+   Encarnación, Peñuelas ,1378
+   Jaguas, Peñuelas,2211
+   Macaná, Peñuelas,803
+   Peñuelas, Peñuelas ,1422
+   Quebrada Ceiba, Peñuelas ,4731
+   Rucio, Peñuelas ,1064
+   Santo Domingo, Peñuelas ,5761
+   Tallaboa Alta, Peñuelas ,3784
+   Tallaboa Poniente, Peñuelas ,696
+   Tallaboa Saliente, Peñuelas ,244
+   Anón, Ponce ,1670
+   Bucaná, Ponce ,3630
+   Canas, Ponce ,32708
+   Canas Urbano, Ponce,17933
+   Capitanejo, Ponce ,1011
+   Cerrillos, Ponce,4356
+   Coto Laurel, Ponce ,7123
+   Cuarto, Ponce ,1999
+   Guaraguao, Ponce ,1117
+   Machuelo Abajo, Ponce,11855
+   Machuelo Arriba, Ponce ,12412
+   Magueyes, Ponce ,5947
+   Magueyes Urbano, Ponce ,1132
+   Maragüez, Ponce,545
+   Marueño, Ponce ,1692
+   Monte Llano, Ponce,523
+   Playa, Ponce ,14077
+   Portugués, Ponce,4134
+   Portugués Urbano, Ponce ,4110
+   Primero, Ponce ,3175
+   Quebrada Limón, Ponce ,709
+   Quinto, Ponce ,568
+   Real, Ponce ,3696
+   Sabanetas, Ponce ,5534
+   San Antón, Ponce ,10992
+   San Patricio, Ponce ,564
+   Segundo, Ponce ,7213
+   Sexto, Ponce ,3529
+   Tercero, Ponce ,668
+   Tibes, Ponce ,804
+   Vayas, Ponce ,901
+   Cacao, Quebradillas ,4663
+   Charcas, Quebradillas ,401
+   Cocos, Quebradillas ,4889
+   Guajataca, Quebradillas ,1611
+   Quebradillas, Quebradillas ,3103
+   San Antonio, Quebradillas ,5164
+   San José, Quebradillas ,2986
+   Terranova, Quebradillas ,3102
+   Atalaya, Rincón ,956
+   Barrero, Rincón ,1084
+   Calvache, Rincón ,2222
+   Cruces, Rincón ,1417
+   Ensenada, Rincón ,1328
+   Jagüey, Rincón ,702
+   Pueblo, Rincón ,3796
+   Puntas, Rincón ,1575
+   Rincón, Rincón ,933
+   Río Grande, Rincón ,1187
+   Ciénaga Alta, Río Grande ,4911
+   Ciénaga Baja, Río Grande ,18385
+   Guzmán Abajo, Río Grande ,7367
+   Guzmán Arriba, Río Grande ,1116
+   Herreras, Río Grande ,782
+   Jiménez, Río Grande ,2925
+   Mameyes 2, Río Grande ,2732
+   Río Grande, Río Grande ,1772
+   Zarzal, Río Grande ,14314
+   Machuchal, Sabana Grande ,4773
+   Rayo, Sabana Grande,3084
+   Rincón, Sabana Grande ,3450
+   Sabana Grande, Sabana Grande ,1554
+   Santana, Sabana Grande ,7291
+   Susúa, Sabana Grande ,2736
+   Tabonuco, Sabana Grande ,281
+   Torre, Sabana Grande ,2096
+   Aguirre, Salinas ,14005
+   Lapa, Salinas ,9419
+   Palmas, Salinas ,313
+   Quebrada Yeguas, Salinas ,1528
+   Río Jueyes, Salinas ,3360
+   Salinas, Salinas ,2453
+   Ancones, San Germán ,1386
+   Caín Alto, San Germán ,2830
+   Caín Bajo, San Germán ,1207
+   Cotuí, San Germán ,749
+   Duey Alto, San Germán ,1350
+   Duey Bajo, San Germán ,980
+   Guamá, San Germán ,2126
+   Hoconuco Alto, San Germán ,572
+   Hoconuco Bajo, San Germán ,1906
+   Maresúa, San Germán ,1794
+   Minillas, San Germán ,3377
+   Retiro, San Germán ,6728
+   Rosario Alto, San Germán ,721
+   Rosario Bajo, San Germán ,1544
+   Rosario Peñón, San Germán ,805
+   Sabana Eneas, San Germán ,1992
+   Sabana Grande Abajo, San Germán ,2712
+   San Germán, San Germán ,2660
+   Tuna, San Germán ,88
+   Caimito, San Juan,21825
+   Cupey, San Juan ,36058
+   El Cinco, San Juan ,6198
+   Gobernador Piñero, San Juan ,44006
+   Hato Rey Central, San Juan ,16640
+   Hato Rey Norte, San Juan ,16378
+   Hato Rey Sur, San Juan ,10738
+   Monacillo, San Juan,11442
+   Monacillo Urbano, San Juan ,22342
+   Oriente, San Juan,31374
+   Pueblo, San Juan,8720
+   Quebrada Arenas, San Juan ,2747
+   Sabana Llana Norte, San Juan ,30118
+   Sabana Llana Sur, San Juan ,41346
+   San Juan Antiguo, San Juan ,7085
+   Santurce, San Juan ,81251
+   Tortugo, San Juan ,4543
+   Universidad, San Juan ,2515
+   Cayaguás, San Lorenzo ,1682
+   Cerro Gordo, San Lorenzo ,5284
+   Espino, San Lorenzo ,3430
+   Florida, San Lorenzo ,5293
+   Hato, San Lorenzo ,6945
+   Jagual, San Lorenzo ,4042
+   Quebrada, San Lorenzo ,3354
+   Quebrada Arenas, San Lorenzo ,2390
+   Quebrada Honda, San Lorenzo ,1881
+   Quemados, San Lorenzo ,4712
+   San Lorenzo, San Lorenzo ,2045
+   Aibonito, San Sebastián ,1972
+   Alto Sano, San Sebastián ,920
+   Bahomamey, San Sebastián ,2218
+   Calabazas, San Sebastián ,2768
+   Cibao, San Sebastián ,1224
+   Cidral, San Sebastián ,415
+   Culebrinas, San Sebastián ,3787
+   Eneas, San Sebastián,996
+   Guacio, San Sebastián ,640
+   Guajataca, San Sebastián ,603
+   Guatemala, San Sebastián ,2512
+   Hato Arriba, San Sebastián ,1980
+   Hoya Mala, San Sebastián ,3594
+   Juncal, San Sebastián ,1926
+   Magos, San Sebastián,232
+   Mirabales, San Sebastián ,672
+   Perchas 1, San Sebastián ,902
+   Perchas I, San Sebastián ,902
+   Perchas II, San Sebastián ,988
+   Piedras Blancas, San Sebastián ,2563
+   Pozas, San Sebastián ,3515
+   Robles, San Sebastián ,1697
+   Salto, San Sebastián ,3069
+   San Sebastián, San Sebastián ,1424
+   Sonador, San Sebastián ,1813
+   Boca Velázquez, Santa Isabel ,2705
+   Descalabrado, Santa Isabel ,4138
+   Felicia I, Santa Isabel ,530
+   Felicia II, Santa Isabel ,3230
+   Jauca I, Santa Isabel ,2177
+   Jauca II, Santa Isabel,4554
+   Playa, Santa Isabel ,807
+   Santa Isabel, Santa Isabel ,5133
+   Contorno, Toa Alta ,4737
+   Galateo, Toa Alta ,5917
+   Mucarabones, Toa Alta,23221
+   Ortiz, Toa Alta ,26580
+   Piñas, Toa Alta ,1354
+   Quebrada Arenas, Toa Alta ,3951
+   Quebrada Cruz, Toa Alta ,5343
+   Río Lajas, Toa Alta ,2566
+   Toa Alta, Toa Alta ,397
+   Candelaria, Toa Baja,23343
+   Media Luna, Toa Baja ,12221
+   Palo Seco, Toa Baja ,288
+   Sabana Seca, Toa Baja,53192
+   Toa Baja, Toa Baja ,565
+   Carraízo, Trujillo Alto,16399
+   Cuevas, Trujillo Alto,19852
+   Dos Bocas, Trujillo Alto ,8632
+   La Gloria, Trujillo Alto,4665
+   Quebrada Grande, Trujillo Alto ,4376
+   Quebrada Negrito, Trujillo Alto ,5610
+   St. Just, Trujillo Alto ,14635
+   Trujillo Alto, Trujillo Alto ,673
+   Angeles, Utuado ,3056
+   Arenas, Utuado ,1860
+   Caguana, Utuado ,4009
+   Caniaco, Utuado ,198
+   Caonillas Abajo, Utuado ,965
+   Caonillas Arriba, Utuado ,296
+   Consejo, Utuado,610
+   Don Alonso, Utuado ,900
+   Guaonica, Utuado ,538
+   Las Palmas, Utuado ,1153
+   Limón, Utuado ,227
+   Mameyes Abajo, Utuado ,1136
+   Paso Palma, Utuado ,582
+   Río Abajo, Utuado ,237
+   Roncador, Utuado ,637
+   Sabana Grande, Utuado ,1112
+   Salto Abajo, Utuado ,3929
+   Salto Arriba, Utuado ,617
+   Santa Isabel, Utuado,660
+   Santa Rosa, Utuado ,0
+   Tetuán, Utuado ,680
+   Utuado, Utuado ,5856
+   Viví Abajo, Utuado ,3143
+   Viví Arriba, Utuado ,748
+   Bajura, Vega Alta ,3725
+   Candelaria, Vega Alta ,1915
+   Cienegueta, Vega Alta ,711
+   Espinosa, Vega Alta ,11706
+   Maricao, Vega Alta ,5192
+   Mavilla, Vega Alta ,369
+   Sabana, Vega Alta,15164
+   Vega Alta, Vega Alta ,1169
+   Algarrobo, Vega Baja ,15764
+   Almirante Norte, Vega Baja ,4397
+   Almirante Sur, Vega Baja ,3115
+   Cabo Caribe, Vega Baja ,3989
+   Ceiba, Vega Baja ,4685
+   Cibuco, Vega Baja ,50
+   Puerto Nuevo, Vega Baja ,5908
+   Pugnado Adentro, Vega Baja ,1278
+   Pugnado Afuera, Vega Baja ,11808
+   Quebrada Arenas, Vega Baja ,773
+   Río Abajo, Vega Baja ,4795
+   Río Arriba, Vega Baja ,352
+   Vega Baja, Vega Baja ,816
+   Yeguada, Vega Baja ,1932
+   Florida, Vieques ,3821
+Barrio Pueblo (Isabel II), Vieques ,1207
+   Llave, Vieques ,18
+   Mosquito, Vieques ,0
+   Puerto Diablo, Vieques,1896
+   Puerto Ferro, Vieques ,705
+   Puerto Real, Vieques ,1654
+   Punta Arenas, Vieques ,0
+   Caonillas Abajo, Villalba ,1448
+   Caonillas Arriba, Villalba ,1537
+   Hato Puerco Abajo, Villalba ,1764
+   Hato Puerco Arriba, Villalba ,7728
+   Vacas, Villalba ,4049
+   Villalba, Villalba ,729
+   Villalba Abajo, Villalba,2880
+   Villalba Arriba, Villalba ,5938
+   Aguacate, Yabucoa ,2828
+   Calabazas, Yabucoa ,7675
+   Camino Nuevo, Yabucoa ,3391
+   Guayabota, Yabucoa,3124
+   Jácana, Yabucoa ,3246
+   Juan Martín, Yabucoa ,3891
+   Limones, Yabucoa ,3234
+   Playa, Yabucoa ,4915
+   Tejas, Yabucoa ,3044
+   Yabucoa, Yabucoa ,2593
+   Aguas Blancas, Yauco ,231
+   Algarrobo, Yauco ,419
+   Almácigo Alto, Yauco,1659
+   Almácigo Bajo, Yauco ,5443
+   Barina, Yauco ,5930
+   Caimito, Yauco ,431
+   Collores, Yauco,773
+   Diego Hernández, Yauco ,1247
+   Duey, Yauco ,1108
+   Frailes, Yauco,321
+   Jácanas, Yauco ,1690
+   Naranjo, Yauco ,599
+   Quebradas, Yauco ,883
+   Ranchera, Yauco ,446
+   Río Prieto, Yauco ,680
+   Rubias, Yauco ,309
+   Sierra Alta, Yauco ,1063
+   Susúa Alta, Yauco ,3719
+   Susúa Baja, Yauco ,11856
+   Vegas, Yauco ,145
+   Yauco, Yauco ,3091
