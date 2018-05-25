@@ -35,7 +35,7 @@ alexis.ul <- sep.ul + oct.ul - sep.exp.ll - oct.exp.ll
 alexis.ll <- sep.ll + oct.ll - sep.exp.ul - oct.exp.ul
 
 excess_df <- data.frame(cbind(c("Unadjusted survey estimate", "Adjusted survey estimate", "Official death count", "Santos-Lozada and Howard (2018)", "New York Times"),
-                              c(4645,5740, 64, alexis, 1052), c(793, 1057, NA, alexis.ll, NA), c(8498,10338, NA, alexis.ul, NA)))
+                              c(4645,5740, 64, alexis, 1052), c(793, 1506, NA, alexis.ll, NA), c(8498,9889, NA, alexis.ul, NA)))
 names(excess_df) <- c("type", "estimate", "lower", "upper")
 excess_df$estimate <- as.numeric(as.character(excess_df$estimate))
 excess_df$days <- 102
