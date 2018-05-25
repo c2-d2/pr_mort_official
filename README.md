@@ -1,5 +1,11 @@
 # Introduction
-Here we provide the data and pipeline for:  **The Mortality in Puerto Rico after Hurricane Maria** (doi: 10.1056/NEJMsa1803972)  
+Here we provide the data and pipeline for:  **The Mortality in Puerto Rico after Hurricane Maria** 
+
+DOI: 10.1056/NEJMsa1803972  
+
+# Citation 
+Kishore N, Marqués D, Mahmud A, et al. Mortality in Puerto Rico after Hurricane Maria. N Engl
+J Med. DOI: 10.1056/NEJMsa1803972
 
 # Abstract
 
