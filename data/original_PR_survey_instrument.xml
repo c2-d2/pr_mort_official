@@ -1,0 +1,4191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:orx="http://openrosa.org/jr/xforms" xmlns="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:vellum="http://commcarehq.org/xforms/vellum">
+	<h:head>
+		<h:title>Encuesta de Mortalidad</h:title>
+		<model>
+			<instance>
+				<data xmlns:jrm="http://dev.commcarehq.org/jr/xforms" xmlns="http://openrosa.org/formdesigner/1760CBA7-BDD1-4423-A6EC-3C5F55EA081F" uiVersion="1" version="1" name="Encuesta de Mortalidad">
+					<casa />
+					<consent />
+					<hh_num />
+					<hh>
+						<hh_rep jr:template="">
+							<hh_mem_num />
+							<group>
+								<person_label />
+								<gender />
+								<age />
+								<lived_movedin />
+								<movedin_month />
+								<movedin_bc_hurricane />
+								<status />
+								<missing_month />
+								<left_month />
+								<left_b_p_hurricane />
+								<left_bc_hurricane />
+								<left_first />
+								<left_final />
+							</group>
+						</hh_rep>
+					</hh>
+					<mort>
+						<rep jr:template="">
+							<count />
+							<group>
+								<age />
+								<sex />
+								<label />
+								<died_month />
+								<died_b_p_hurricane />
+								<cause_of_death />
+								<cause_of_death_ot />
+							</group>
+						</rep>
+					</mort>
+					<access_med>
+						<afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes />
+						<no_911 />
+						<no_transport />
+						<roads_damaged />
+						<facility_closed />
+						<no_doctors />
+						<no_dialysis />
+						<no_resp_mach />
+						<no_meds />
+						<couldnt_afford />
+						<ot_reasons />
+						<access_other />
+					</access_med>
+					<water>
+						<water_short_b />
+						<lost_water />
+						<label />
+						<sept />
+						<oct />
+						<nov />
+						<dec />
+						<lost_drink_water />
+						<lable_2 />
+						<sept_drink />
+						<copy-1-of-oct />
+						<copy-1-of-nov />
+						<copy-1-of-dec />
+						<drinkable_water_now />
+					</water>
+					<electricity>
+						<elec_short_b />
+						<lost_elec />
+						<label />
+						<sept />
+						<oct />
+						<nov />
+						<dec />
+					</electricity>
+					<cell>
+						<cell_short_b />
+						<lost_cell />
+						<label />
+						<sept />
+						<oct />
+						<nov />
+						<dec />
+					</cell>
+					<neighbors>
+						<mort_neighbor />
+						<left_neighbor />
+						<neighbors_num />
+					</neighbors>
+					<notas />
+				</data>
+			</instance>
+			<bind vellum:nodeset="#form/casa" nodeset="/data/casa" required="true()" />
+			<bind vellum:nodeset="#form/consent" nodeset="/data/consent" vellum:relevant="#form/casa = '1'" relevant="/data/casa = '1'" required="true()" />
+			<bind vellum:nodeset="#form/hh_num" nodeset="/data/hh_num" type="xsd:int" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" required="true()" />
+			<bind vellum:nodeset="#form/hh" nodeset="/data/hh" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/hh/hh_rep" nodeset="/data/hh/hh_rep" />
+			<bind vellum:nodeset="#form/hh/hh_rep/hh_mem_num" nodeset="/data/hh/hh_rep/hh_mem_num" calculate="position(..) + 1" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group" nodeset="/data/hh/hh_rep/group" vellum:relevant="position(..) &lt; #form/hh_num" relevant="position(..) &lt; /data/hh_num" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/person_label" nodeset="/data/hh/hh_rep/group/person_label" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/gender" nodeset="/data/hh/hh_rep/group/gender" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/age" nodeset="/data/hh/hh_rep/group/age" type="xsd:int" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/lived_movedin" nodeset="/data/hh/hh_rep/group/lived_movedin" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/movedin_month" nodeset="/data/hh/hh_rep/group/movedin_month" vellum:relevant="#form/hh/hh_rep/group/lived_movedin = '2'" relevant="/data/hh/hh_rep/group/lived_movedin = '2'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/movedin_bc_hurricane" nodeset="/data/hh/hh_rep/group/movedin_bc_hurricane" vellum:relevant="#form/hh/hh_rep/group/lived_movedin = '2'" relevant="/data/hh/hh_rep/group/lived_movedin = '2'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/status" nodeset="/data/hh/hh_rep/group/status" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/missing_month" nodeset="/data/hh/hh_rep/group/missing_month" vellum:relevant="#form/hh/hh_rep/group/status = '4'" relevant="/data/hh/hh_rep/group/status = '4'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/left_month" nodeset="/data/hh/hh_rep/group/left_month" vellum:relevant="#form/hh/hh_rep/group/status = '3'" relevant="/data/hh/hh_rep/group/status = '3'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/left_b_p_hurricane" nodeset="/data/hh/hh_rep/group/left_b_p_hurricane" vellum:relevant="#form/hh/hh_rep/group/left_month = '9'" relevant="/data/hh/hh_rep/group/left_month = '9'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/left_bc_hurricane" nodeset="/data/hh/hh_rep/group/left_bc_hurricane" vellum:relevant="#form/hh/hh_rep/group/left_month = '10' or #form/hh/hh_rep/group/left_month = '11' or #form/hh/hh_rep/group/left_month = '12' or #form/hh/hh_rep/group/left_b_p_hurricane = '2'" relevant="/data/hh/hh_rep/group/left_month = '10' or /data/hh/hh_rep/group/left_month = '11' or /data/hh/hh_rep/group/left_month = '12' or /data/hh/hh_rep/group/left_b_p_hurricane = '2'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/left_first" nodeset="/data/hh/hh_rep/group/left_first" vellum:relevant="#form/hh/hh_rep/group/left_month = '10' or #form/hh/hh_rep/group/left_month = '11' or #form/hh/hh_rep/group/left_month = '12' or #form/hh/hh_rep/group/left_b_p_hurricane = '2' or #form/hh/hh_rep/group/left_bc_hurricane = '1'" relevant="/data/hh/hh_rep/group/left_month = '10' or /data/hh/hh_rep/group/left_month = '11' or /data/hh/hh_rep/group/left_month = '12' or /data/hh/hh_rep/group/left_b_p_hurricane = '2' or /data/hh/hh_rep/group/left_bc_hurricane = '1'" required="true()" />
+			<bind vellum:nodeset="#form/hh/hh_rep/group/left_final" nodeset="/data/hh/hh_rep/group/left_final" vellum:relevant="#form/hh/hh_rep/group/left_month = '12' or #form/hh/hh_rep/group/left_month = '11' or #form/hh/hh_rep/group/left_month = '10' or #form/hh/hh_rep/group/left_b_p_hurricane = '2' or #form/hh/hh_rep/group/left_bc_hurricane = '1'" relevant="/data/hh/hh_rep/group/left_month = '12' or /data/hh/hh_rep/group/left_month = '11' or /data/hh/hh_rep/group/left_month = '10' or /data/hh/hh_rep/group/left_b_p_hurricane = '2' or /data/hh/hh_rep/group/left_bc_hurricane = '1'" required="true()" />
+			<bind vellum:nodeset="#form/mort" nodeset="/data/mort" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/mort/rep" nodeset="/data/mort/rep" />
+			<bind vellum:nodeset="#form/mort/rep/count" nodeset="/data/mort/rep/count" calculate="position(..) + 1" />
+			<bind vellum:nodeset="#form/mort/rep/group" nodeset="/data/mort/rep/group" vellum:relevant="position(..) &lt; #form/hh_num and current()/../count = /data/hh/hh_rep[position() = current()/../count][group/status = '2']/hh_mem_num" relevant="position(..) &lt; /data/hh_num and current()/../count = /data/hh/hh_rep[position() = current()/../count][group/status = '2']/hh_mem_num" />
+			<bind vellum:nodeset="#form/mort/rep/group/age" nodeset="/data/mort/rep/group/age" calculate="/data/hh/hh_rep[position() = current()/../../count][group/status = '2']/group/age[1]" />
+			<bind vellum:nodeset="#form/mort/rep/group/sex" nodeset="/data/mort/rep/group/sex" calculate="if(/data/hh/hh_rep[position() = current()/../../count][group/status = '2']/group/gender[1] = '1', &quot;Masculino&quot;, if(/data/hh/hh_rep[position() = current()/../../count][group/status = '2']/group/gender[1] = '0', &quot;Femenino&quot;, &quot;Otro&quot;))" />
+			<bind vellum:nodeset="#form/mort/rep/group/label" nodeset="/data/mort/rep/group/label" />
+			<bind vellum:nodeset="#form/mort/rep/group/died_month" nodeset="/data/mort/rep/group/died_month" required="true()" />
+			<bind vellum:nodeset="#form/mort/rep/group/died_b_p_hurricane" nodeset="/data/mort/rep/group/died_b_p_hurricane" vellum:relevant="#form/mort/rep/group/died_month = '9'" relevant="/data/mort/rep/group/died_month = '9'" required="true()" />
+			<bind vellum:nodeset="#form/mort/rep/group/cause_of_death" nodeset="/data/mort/rep/group/cause_of_death" vellum:relevant="#form/mort/rep/group/died_month = '12' or #form/mort/rep/group/died_month = '11' or #form/mort/rep/group/died_month = '10' or #form/mort/rep/group/died_b_p_hurricane = '2'" relevant="/data/mort/rep/group/died_month = '12' or /data/mort/rep/group/died_month = '11' or /data/mort/rep/group/died_month = '10' or /data/mort/rep/group/died_b_p_hurricane = '2'" required="true()" />
+			<bind vellum:nodeset="#form/mort/rep/group/cause_of_death_ot" nodeset="/data/mort/rep/group/cause_of_death_ot" type="xsd:string" vellum:relevant="#form/mort/rep/group/cause_of_death = '99'" relevant="/data/mort/rep/group/cause_of_death = '99'" required="true()" />
+			<bind vellum:nodeset="#form/access_med" nodeset="/data/access_med" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes" nodeset="/data/access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes" />
+			<bind vellum:nodeset="#form/access_med/no_911" nodeset="/data/access_med/no_911" required="true()" />
+			<bind vellum:nodeset="#form/access_med/no_transport" nodeset="/data/access_med/no_transport" required="true()" />
+			<bind vellum:nodeset="#form/access_med/roads_damaged" nodeset="/data/access_med/roads_damaged" required="true()" />
+			<bind vellum:nodeset="#form/access_med/facility_closed" nodeset="/data/access_med/facility_closed" required="true()" />
+			<bind vellum:nodeset="#form/access_med/no_doctors" nodeset="/data/access_med/no_doctors" required="true()" />
+			<bind vellum:nodeset="#form/access_med/no_dialysis" nodeset="/data/access_med/no_dialysis" required="true()" />
+			<bind vellum:nodeset="#form/access_med/no_resp_mach" nodeset="/data/access_med/no_resp_mach" required="true()" />
+			<bind vellum:nodeset="#form/access_med/no_meds" nodeset="/data/access_med/no_meds" required="true()" />
+			<bind vellum:nodeset="#form/access_med/couldnt_afford" nodeset="/data/access_med/couldnt_afford" required="true()" />
+			<bind vellum:nodeset="#form/access_med/ot_reasons" nodeset="/data/access_med/ot_reasons" type="xsd:string" required="true()" />
+			<bind vellum:nodeset="#form/access_med/access_other" nodeset="/data/access_med/access_other" required="true()" />
+			<bind vellum:nodeset="#form/water" nodeset="/data/water" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/water/water_short_b" nodeset="/data/water/water_short_b" required="true()" />
+			<bind vellum:nodeset="#form/water/lost_water" nodeset="/data/water/lost_water" required="true()" />
+			<bind vellum:nodeset="#form/water/label" nodeset="/data/water/label" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="false()" />
+			<bind vellum:nodeset="#form/water/sept" nodeset="/data/water/sept" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/oct" nodeset="/data/water/oct" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/nov" nodeset="/data/water/nov" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/dec" nodeset="/data/water/dec" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/lost_drink_water" nodeset="/data/water/lost_drink_water" required="true()" />
+			<bind vellum:nodeset="#form/water/lable_2" nodeset="/data/water/lable_2" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="false()" />
+			<bind vellum:nodeset="#form/water/sept_drink" nodeset="/data/water/sept_drink" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/copy-1-of-oct" nodeset="/data/water/copy-1-of-oct" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/copy-1-of-nov" nodeset="/data/water/copy-1-of-nov" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/copy-1-of-dec" nodeset="/data/water/copy-1-of-dec" vellum:relevant="#form/water/lost_water = '1'" relevant="/data/water/lost_water = '1'" required="true()" />
+			<bind vellum:nodeset="#form/water/drinkable_water_now" nodeset="/data/water/drinkable_water_now" vellum:relevant="#form/water/lost_drink_water = '1' or #form/water/lost_drink_water = '3'" relevant="/data/water/lost_drink_water = '1' or /data/water/lost_drink_water = '3'" required="true()" />
+			<bind vellum:nodeset="#form/electricity" nodeset="/data/electricity" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/electricity/elec_short_b" nodeset="/data/electricity/elec_short_b" required="true()" />
+			<bind vellum:nodeset="#form/electricity/lost_elec" nodeset="/data/electricity/lost_elec" required="true()" />
+			<bind vellum:nodeset="#form/electricity/label" nodeset="/data/electricity/label" vellum:relevant="#form/electricity/lost_elec = '1'" relevant="/data/electricity/lost_elec = '1'" required="false()" />
+			<bind vellum:nodeset="#form/electricity/sept" nodeset="/data/electricity/sept" vellum:relevant="#form/electricity/lost_elec = '1'" relevant="/data/electricity/lost_elec = '1'" required="true()" />
+			<bind vellum:nodeset="#form/electricity/oct" nodeset="/data/electricity/oct" vellum:relevant="#form/electricity/lost_elec = '1'" relevant="/data/electricity/lost_elec = '1'" required="true()" />
+			<bind vellum:nodeset="#form/electricity/nov" nodeset="/data/electricity/nov" vellum:relevant="#form/electricity/lost_elec = '1'" relevant="/data/electricity/lost_elec = '1'" required="true()" />
+			<bind vellum:nodeset="#form/electricity/dec" nodeset="/data/electricity/dec" vellum:relevant="#form/electricity/lost_elec = '1'" relevant="/data/electricity/lost_elec = '1'" required="true()" />
+			<bind vellum:nodeset="#form/cell" nodeset="/data/cell" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/cell/cell_short_b" nodeset="/data/cell/cell_short_b" required="true()" />
+			<bind vellum:nodeset="#form/cell/lost_cell" nodeset="/data/cell/lost_cell" required="true()" />
+			<bind vellum:nodeset="#form/cell/label" nodeset="/data/cell/label" vellum:relevant="#form/cell/lost_cell = '1'" relevant="/data/cell/lost_cell = '1'" />
+			<bind vellum:nodeset="#form/cell/sept" nodeset="/data/cell/sept" vellum:relevant="#form/cell/lost_cell = '1'" relevant="/data/cell/lost_cell = '1'" required="true()" />
+			<bind vellum:nodeset="#form/cell/oct" nodeset="/data/cell/oct" vellum:relevant="#form/cell/lost_cell = '1'" relevant="/data/cell/lost_cell = '1'" required="true()" />
+			<bind vellum:nodeset="#form/cell/nov" nodeset="/data/cell/nov" vellum:relevant="#form/cell/lost_cell = '1'" relevant="/data/cell/lost_cell = '1'" required="true()" />
+			<bind vellum:nodeset="#form/cell/dec" nodeset="/data/cell/dec" vellum:relevant="#form/cell/lost_cell = '1'" relevant="/data/cell/lost_cell = '1'" required="true()" />
+			<bind vellum:nodeset="#form/neighbors" nodeset="/data/neighbors" vellum:relevant="#form/consent = '1' and #form/casa = '1'" relevant="/data/consent = '1' and /data/casa = '1'" />
+			<bind vellum:nodeset="#form/neighbors/mort_neighbor" nodeset="/data/neighbors/mort_neighbor" required="true()" />
+			<bind vellum:nodeset="#form/neighbors/left_neighbor" nodeset="/data/neighbors/left_neighbor" required="true()" />
+			<bind vellum:nodeset="#form/neighbors/neighbors_num" nodeset="/data/neighbors/neighbors_num" required="true()" />
+			<bind vellum:nodeset="#form/notas" nodeset="/data/notas" type="xsd:string" vellum:relevant="#form/consent = '1'" relevant="/data/consent = '1'" required="true()" />
+			<setvalue event="xforms-ready" vellum:ref="#form/access_med/ot_reasons" ref="/data/access_med/ot_reasons" value="'NA'" />
+			<setvalue event="xforms-ready" vellum:ref="#form/notas" ref="/data/notas" value="'NA'" />
+			<itext>
+				<translation lang="es" default="">
+					<text id="casa-label">
+						<value>Estado de Casa</value>
+					</text>
+					<text id="casa-1-label">
+						<value>Hay alguien que puede dar consentimiento</value>
+					</text>
+					<text id="casa-0-label">
+						<value>No hay nadie para dar consentimiento</value>
+					</text>
+					<text id="consent-label">
+						<value>**Consentimiento:**
+
+¡Hola! Me llamo _____________.
+
+Soy un estudiante en ___________ y estoy trabajando en un estudio de investigación con investigadores de salud pública de la Universidad de Harvard. Mis colegas y yo esperamos comprender mejor el impacto de Hurracan Maria en las tasa de mortalidad. Vamos a comparar la mortalidad en los meses antes y despues del desastre. 
+
+Estamos aquí en el área para realizar nuestra investigación. Como parte de la investigación, nos gustaría preguntar si podemos entrevistarlo. 
+
+No tiene que participar en la investigación. Tu participación es voluntaria Todo lo que digas será completamente anónimo, lo que significa que no pediremos tu nombre ni lo usaremos en el estudio, y nadie sabrá qué respuestas son tuyas. Todas sus respuestas serán anónimas, confidenciales y privadas. No registraremos su nombre ni nada que permita identificarlo. Si lo desea, podemos brindarle más información sobre el estudio, qué puede esperar si participa en el estudio y qué riesgos y beneficios puede tener al participar en el estudio. Tiene derecho a negarse a participar en el estudio y su derecho a retirarse del estudio en cualquier momento. No hay penalidad si decide no participar. 
+
+Si desea participar, nos gustaría hacerle preguntas en un lugar privado para garantizar que se mantenga su confidencialidad.
+
+¿Te gustaría participar en este estudio?</value>
+						<value form="markdown">**Consentimiento:**
+
+¡Hola! Me llamo _____________.
+
+Soy un estudiante en ___________ y estoy trabajando en un estudio de investigación con investigadores de salud pública de la Universidad de Harvard. Mis colegas y yo esperamos comprender mejor el impacto de Hurracan Maria en las tasa de mortalidad. Vamos a comparar la mortalidad en los meses antes y despues del desastre. 
+
+Estamos aquí en el área para realizar nuestra investigación. Como parte de la investigación, nos gustaría preguntar si podemos entrevistarlo. 
+
+No tiene que participar en la investigación. Tu participación es voluntaria Todo lo que digas será completamente anónimo, lo que significa que no pediremos tu nombre ni lo usaremos en el estudio, y nadie sabrá qué respuestas son tuyas. Todas sus respuestas serán anónimas, confidenciales y privadas. No registraremos su nombre ni nada que permita identificarlo. Si lo desea, podemos brindarle más información sobre el estudio, qué puede esperar si participa en el estudio y qué riesgos y beneficios puede tener al participar en el estudio. Tiene derecho a negarse a participar en el estudio y su derecho a retirarse del estudio en cualquier momento. No hay penalidad si decide no participar. 
+
+Si desea participar, nos gustaría hacerle preguntas en un lugar privado para garantizar que se mantenga su confidencialidad.
+
+¿Te gustaría participar en este estudio?</value>
+					</text>
+					<text id="consent-1-label">
+						<value>Si</value>
+					</text>
+					<text id="consent-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh_num-label">
+						<value>¿Cuántas personas en total han vivido en este hogar desde el inicio de enero hasta los finales de diciembre en 2017?</value>
+						<value form="markdown">¿Cuántas personas en total han vivido en este hogar desde el inicio de enero hasta los finales de diciembre en 2017?</value>
+					</text>
+					<text id="hh-label">
+						<value>PERSONAS EN LA CASA EN 2017</value>
+					</text>
+					<text id="hh/hh_rep/group/person_label-label">
+						<value>**Persona # <output value="/data/hh/hh_rep/hh_mem_num" vellum:value="#form/hh/hh_rep/hh_mem_num" />**</value>
+						<value form="markdown">**Persona # <output value="/data/hh/hh_rep/hh_mem_num" vellum:value="#form/hh/hh_rep/hh_mem_num" />**</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-label">
+						<value>Género</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-1-label">
+						<value>Masculino</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-0-label">
+						<value>Femenino</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-2-label">
+						<value>Otro</value>
+					</text>
+					<text id="hh/hh_rep/group/age-label">
+						<value>Edad</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-label">
+						<value>¿Vivía aqui en los inicios de enero o se mudó a esta casa en el 2017?</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-1-label">
+						<value>Vivía aqui</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-2-label">
+						<value>Se mudó a esta casa</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-label">
+						<value>¿En qué mes se mudó a esta casa?</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-1-label">
+						<value>Enero</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-2-label">
+						<value>Febrero</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-3-label">
+						<value>Marzo</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-4-label">
+						<value>Abril</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-5-label">
+						<value>Mayo</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-6-label">
+						<value>Junio</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-7-label">
+						<value>Julio</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-8-label">
+						<value>Agosto</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-9-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-10-label">
+						<value>Octubre</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-11-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-12-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-label">
+						<value>¿Se mudó a esta casa debido al huracán?</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-1-label">
+						<value>Si</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh/hh_rep/group/status-label">
+						<value>Estado actual</value>
+					</text>
+					<text id="hh/hh_rep/group/status-1-label">
+						<value>Aún vive en este hogar</value>
+					</text>
+					<text id="hh/hh_rep/group/status-2-label">
+						<value>Murió en el 2017
+ </value>
+					</text>
+					<text id="hh/hh_rep/group/status-3-label">
+						<value>Se fue en el 2017 y no volvió
+ </value>
+					</text>
+					<text id="hh/hh_rep/group/status-4-label">
+						<value>Desapareció
+ </value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-label">
+						<value>¿En qué mes se desapareció?</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-1-label">
+						<value>Enero</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-2-label">
+						<value>Febrero</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-3-label">
+						<value>Marzo</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-4-label">
+						<value>Abril</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-5-label">
+						<value>Mayo</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-6-label">
+						<value>Junio</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-7-label">
+						<value>Julio</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-8-label">
+						<value>Agosto</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-9-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-10-label">
+						<value>Octubre</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-11-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-12-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-label">
+						<value>¿En qué mes se fue esta persona?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-1-label">
+						<value>Enero</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-2-label">
+						<value>Febrero</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-3-label">
+						<value>Marzo</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-4-label">
+						<value>Abril</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-5-label">
+						<value>Mayo</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-6-label">
+						<value>Junio</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-7-label">
+						<value>Julio</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-8-label">
+						<value>Agosto</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-9-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-10-label">
+						<value>Octubre</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-11-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-12-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-label">
+						<value>¿Se fue antes o después del huracán María?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-1-label">
+						<value>Antes</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-2-label">
+						<value>Despues</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-label">
+						<value>¿Se fue debido al huracán?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-1-label">
+						<value>Si</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-label">
+						<value>¿A dónde se fue inicialmente?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-1-label">
+						<value>A otra parte de Puerto Rico</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-2-label">
+						<value>Florida</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-3-label">
+						<value>Nueva York    
+ </value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-4-label">
+						<value>Texas</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-5-label">
+						<value>Otro Estado en EEUU</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-6-label">
+						<value>Otro país, fuera de los EEUU</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-0-label">
+						<value>No se</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-label">
+						<value>¿Dónde está ahora?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-1-label">
+						<value>A otra parte de Puerto Rico</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-2-label">
+						<value>Florida</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-3-label">
+						<value>Nueva York    
+ </value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-4-label">
+						<value>Texas</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-5-label">
+						<value>Otro Estado en EEUU</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-6-label">
+						<value>Otro país, fuera de los EEUU</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-0-label">
+						<value>No se</value>
+					</text>
+					<text id="mort-label">
+						<value>PERSONAS QUE MURIERON EN 2017</value>
+					</text>
+					<text id="mort/rep/group/label-label">
+						<value>Persona #: <output value="../../count" />
+Edad: <output value="../age" />
+Género: <output value="../sex" /></value>
+					</text>
+					<text id="mort/rep/group/died_month-label">
+						<value>¿En qué mes murió esta persona?</value>
+					</text>
+					<text id="mort/rep/group/died_month-1-label">
+						<value>Enero</value>
+					</text>
+					<text id="mort/rep/group/died_month-2-label">
+						<value>Febrero</value>
+					</text>
+					<text id="mort/rep/group/died_month-3-label">
+						<value>Marzo</value>
+					</text>
+					<text id="mort/rep/group/died_month-4-label">
+						<value>Abril</value>
+					</text>
+					<text id="mort/rep/group/died_month-5-label">
+						<value>Mayo</value>
+					</text>
+					<text id="mort/rep/group/died_month-6-label">
+						<value>Junio</value>
+					</text>
+					<text id="mort/rep/group/died_month-7-label">
+						<value>Julio</value>
+					</text>
+					<text id="mort/rep/group/died_month-8-label">
+						<value>Agosto</value>
+					</text>
+					<text id="mort/rep/group/died_month-9-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="mort/rep/group/died_month-10-label">
+						<value>Octubre</value>
+					</text>
+					<text id="mort/rep/group/died_month-11-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="mort/rep/group/died_month-12-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-label">
+						<value>¿Se murió antes o después del huracán María?</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-1-label">
+						<value>Antes</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-2-label">
+						<value>Despues</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-label">
+						<value>¿Cuál fue la causa de la muerte?</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-1-label">
+						<value>Traumatismo por accidente de vehículo</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-2-label">
+						<value>Traumatismo por un derrumbe de un edificio
+ </value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-3-label">
+						<value>Traumatismo por deslisamiento de tierras</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-4-label">
+						<value>Traumatismo por otra causa</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-5-label">
+						<value>Ahogamiento</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-6-label">
+						<value>Fuego</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-7-label">
+						<value>Electrocución</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-8-label">
+						<value>Interrupción de atención médica necesaria (medicamentos, diálisis, médico, centro de enfermería)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-9-label">
+						<value>Complicaciones médicas de una lesión , traumatismo o enfermedad directa debido al huracán</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-10-label">
+						<value>Suicidio</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-99-label">
+						<value>Otra razón
+ </value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-0-label">
+						<value>Causas no relacionadas al huracán</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death_ot-label">
+						<value>Por favor, describa la causa de muerte</value>
+					</text>
+					<text id="access_med-label">
+						<value>ATENCIÓN MÉDICA
+ </value>
+					</text>
+					<text id="access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes-label">
+						<value>**¿Afectó el huracán a alguien viviendo en la casa con algunos de los siguientes problemas que no existían antes del huracán? [SUFRIMIENTO]**</value>
+						<value form="markdown">**¿Afectó el huracán a alguien viviendo en la casa con algunos de los siguientes problemas que no existían antes del huracán? [SUFRIMIENTO]**</value>
+					</text>
+					<text id="access_med/no_911-label">
+						<value>No se pudo transportar la persona a atención médica debido a que 911 no estaba disponible</value>
+					</text>
+					<text id="access_med/no_911-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_911-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_911-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_911-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_911-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_911-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_911-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_911-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/no_transport-label">
+						<value>No se pudo obtener atención médica porque no había otros medios de transporte</value>
+					</text>
+					<text id="access_med/no_transport-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_transport-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_transport-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_transport-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_transport-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_transport-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_transport-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_transport-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/roads_damaged-label">
+						<value>No se pudo obtener atención médica porque las carreteras fueron dañadas</value>
+					</text>
+					<text id="access_med/roads_damaged-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/roads_damaged-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/roads_damaged-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/roads_damaged-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/roads_damaged-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/roads_damaged-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/roads_damaged-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/roads_damaged-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/facility_closed-label">
+						<value>No se pudo obtener atención médica debido a que el centro de salud fue dañado o cerrado</value>
+					</text>
+					<text id="access_med/facility_closed-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/facility_closed-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/facility_closed-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/facility_closed-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/facility_closed-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/facility_closed-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/facility_closed-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/facility_closed-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/no_doctors-label">
+						<value>No se pudo obtener atención médica debido a que los médicos no estaban alli
+</value>
+					</text>
+					<text id="access_med/no_doctors-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_doctors-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_doctors-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_doctors-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_doctors-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_doctors-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_doctors-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_doctors-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/no_dialysis-label">
+						<value>No se pudo continuar la diálisis</value>
+					</text>
+					<text id="access_med/no_dialysis-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_dialysis-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_dialysis-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_dialysis-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_dialysis-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_dialysis-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_dialysis-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_dialysis-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/no_resp_mach-label">
+						<value>No se pudo continuar uso de maquinas de respiracion que requiere electricidad (CPAP, BiPAP, nebulizador)</value>
+					</text>
+					<text id="access_med/no_resp_mach-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_resp_mach-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_resp_mach-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_resp_mach-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_resp_mach-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_resp_mach-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_resp_mach-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_resp_mach-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/no_meds-label">
+						<value>No fue posible obtener medicamentos</value>
+					</text>
+					<text id="access_med/no_meds-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_meds-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/no_meds-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/no_meds-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/no_meds-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/no_meds-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/no_meds-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/no_meds-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/couldnt_afford-label">
+						<value>No tenía recursos financieros para atención médica
+ </value>
+					</text>
+					<text id="access_med/couldnt_afford-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/couldnt_afford-0-label">
+						<value>0 días  </value>
+					</text>
+					<text id="access_med/couldnt_afford-1-label">
+						<value>1 día</value>
+					</text>
+					<text id="access_med/couldnt_afford-2-label">
+						<value>2 días              </value>
+					</text>
+					<text id="access_med/couldnt_afford-3-label">
+						<value>3-7 días</value>
+					</text>
+					<text id="access_med/couldnt_afford-4-label">
+						<value>8-30 días        </value>
+					</text>
+					<text id="access_med/couldnt_afford-5-label">
+						<value>&gt; 30 días</value>
+					</text>
+					<text id="access_med/couldnt_afford-6-label">
+						<value>Todavia tenemos este problema</value>
+					</text>
+					<text id="access_med/ot_reasons-label">
+						<value>Otras razones</value>
+					</text>
+					<text id="access_med/access_other-label">
+						<value>¿Accedió a la atención médica en otra instalación?</value>
+					</text>
+					<text id="access_med/access_other-0-label">
+						<value>No</value>
+					</text>
+					<text id="access_med/access_other-1-label">
+						<value>Sí en otro centro de salud puertorriqueño</value>
+					</text>
+					<text id="access_med/access_other-2-label">
+						<value>Sí en un centro de ayuda no permanente</value>
+					</text>
+					<text id="water-label">
+						<value>AGUA</value>
+					</text>
+					<text id="water/water_short_b-label">
+						<value>¿La habían cortado el servicio del agua en el hogar antes del huracán?</value>
+					</text>
+					<text id="water/water_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/water_short_b-1-label">
+						<value>Una vez al día
+ </value>
+					</text>
+					<text id="water/water_short_b-2-label">
+						<value>Una vez por semana
+ </value>
+					</text>
+					<text id="water/water_short_b-3-label">
+						<value>Una vez al mes</value>
+					</text>
+					<text id="water/water_short_b-4-label">
+						<value>Raramente</value>
+					</text>
+					<text id="water/lost_water-label">
+						<value>¿Ha perdido servicio de agua después del huracán?</value>
+					</text>
+					<text id="water/lost_water-1-label">
+						<value>Si</value>
+					</text>
+					<text id="water/lost_water-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/label-label">
+						<value>**¿Por cuántos días por mes no tenia agua?**</value>
+						<value form="markdown">**¿Por cuántos días por mes no tenia agua?**</value>
+					</text>
+					<text id="water/label-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/label-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/label-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/label-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/label-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/sept-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="water/sept-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/sept-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/sept-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/sept-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/sept-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/oct-label">
+						<value>Octubre</value>
+					</text>
+					<text id="water/oct-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/oct-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/oct-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/oct-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/oct-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/nov-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="water/nov-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/nov-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/nov-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/nov-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/nov-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/dec-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="water/dec-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/dec-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/dec-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/dec-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/dec-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/lost_drink_water-label">
+						<value>¿Perdió acceso al agua potable después del huracán?</value>
+					</text>
+					<text id="water/lost_drink_water-1-label">
+						<value>Si</value>
+					</text>
+					<text id="water/lost_drink_water-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/lost_drink_water-3-label">
+						<value>No tenia agua potable antes</value>
+					</text>
+					<text id="water/lable_2-label">
+						<value>**¿Por cuántos días por mes no tenia agua potable?**</value>
+						<value form="markdown">**¿Por cuántos días por mes no tenia agua potable?**</value>
+					</text>
+					<text id="water/lable_2-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/lable_2-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/lable_2-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/lable_2-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/lable_2-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/sept_drink-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="water/sept_drink-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/sept_drink-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/sept_drink-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/sept_drink-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/sept_drink-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/copy-1-of-oct-label">
+						<value>Octubre</value>
+					</text>
+					<text id="water/copy-1-of-oct-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/copy-1-of-oct-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/copy-1-of-oct-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/copy-1-of-oct-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/copy-1-of-oct-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/copy-1-of-nov-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="water/copy-1-of-nov-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/copy-1-of-nov-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/copy-1-of-nov-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/copy-1-of-nov-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/copy-1-of-nov-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/copy-1-of-dec-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="water/copy-1-of-dec-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="water/copy-1-of-dec-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="water/copy-1-of-dec-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="water/copy-1-of-dec-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="water/copy-1-of-dec-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="water/drinkable_water_now-label">
+						<value>¿De dónde obtienes agua potable ahora?</value>
+					</text>
+					<text id="water/drinkable_water_now-1-label">
+						<value>Compro agua potable</value>
+					</text>
+					<text id="water/drinkable_water_now-2-label">
+						<value>De una fuente natural (no tratada)</value>
+					</text>
+					<text id="water/drinkable_water_now-3-label">
+						<value>De una fuente natural (tratada)</value>
+					</text>
+					<text id="electricity-label">
+						<value>ELECTRICIDAD</value>
+					</text>
+					<text id="electricity/elec_short_b-label">
+						<value>¿Le cortaban la luz eléctrica antes del huracán?</value>
+					</text>
+					<text id="electricity/elec_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="electricity/elec_short_b-1-label">
+						<value>Una vez al día
+ </value>
+					</text>
+					<text id="electricity/elec_short_b-2-label">
+						<value>Una vez por semana
+ </value>
+					</text>
+					<text id="electricity/elec_short_b-3-label">
+						<value>Una vez al mes</value>
+					</text>
+					<text id="electricity/elec_short_b-4-label">
+						<value>Raramente</value>
+					</text>
+					<text id="electricity/lost_elec-label">
+						<value>¿Ha perdido luz eléctrica después del huracán?</value>
+					</text>
+					<text id="electricity/lost_elec-1-label">
+						<value>Si</value>
+					</text>
+					<text id="electricity/lost_elec-0-label">
+						<value>No</value>
+					</text>
+					<text id="electricity/label-label">
+						<value>**¿Por cuántos días por mes no tenia electricidad?**</value>
+						<value form="markdown">**¿Por cuántos días por mes no tenia electricidad?**</value>
+					</text>
+					<text id="electricity/label-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="electricity/label-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="electricity/label-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="electricity/label-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="electricity/label-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="electricity/sept-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="electricity/sept-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="electricity/sept-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="electricity/sept-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="electricity/sept-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="electricity/sept-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="electricity/oct-label">
+						<value>Octubre</value>
+					</text>
+					<text id="electricity/oct-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="electricity/oct-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="electricity/oct-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="electricity/oct-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="electricity/oct-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="electricity/nov-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="electricity/nov-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="electricity/nov-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="electricity/nov-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="electricity/nov-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="electricity/nov-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="electricity/dec-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="electricity/dec-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="electricity/dec-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="electricity/dec-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="electricity/dec-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="electricity/dec-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="cell-label">
+						<value>RED CELULAR </value>
+					</text>
+					<text id="cell/cell_short_b-label">
+						<value>¿Con qué frecuencia perdió acceso a redes móviles antes del huracán?</value>
+					</text>
+					<text id="cell/cell_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="cell/cell_short_b-1-label">
+						<value>Una vez al día
+ </value>
+					</text>
+					<text id="cell/cell_short_b-2-label">
+						<value>Una vez por semana
+ </value>
+					</text>
+					<text id="cell/cell_short_b-3-label">
+						<value>Una vez al mes</value>
+					</text>
+					<text id="cell/cell_short_b-4-label">
+						<value>Raramente</value>
+					</text>
+					<text id="cell/lost_cell-label">
+						<value>¿Ha perdido acesso a la red celular después del huracán?</value>
+					</text>
+					<text id="cell/lost_cell-1-label">
+						<value>Si</value>
+					</text>
+					<text id="cell/lost_cell-0-label">
+						<value>No</value>
+					</text>
+					<text id="cell/label-label">
+						<value>**¿Por cuántos días por mes no tenia red celular?**</value>
+						<value form="markdown">**¿Por cuántos días por mes no tenia red celular?**</value>
+					</text>
+					<text id="cell/label-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="cell/label-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="cell/label-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="cell/label-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="cell/label-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="cell/sept-label">
+						<value>Septiembre</value>
+					</text>
+					<text id="cell/sept-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="cell/sept-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="cell/sept-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="cell/sept-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="cell/sept-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="cell/oct-label">
+						<value>Octubre</value>
+					</text>
+					<text id="cell/oct-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="cell/oct-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="cell/oct-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="cell/oct-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="cell/oct-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="cell/nov-label">
+						<value>Noviembre</value>
+					</text>
+					<text id="cell/nov-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="cell/nov-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="cell/nov-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="cell/nov-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="cell/nov-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="cell/dec-label">
+						<value>Diciembre</value>
+					</text>
+					<text id="cell/dec-0-label">
+						<value>0 Días</value>
+						<value form="markdown">0 Días</value>
+					</text>
+					<text id="cell/dec-1-label">
+						<value>1-7 Días</value>
+					</text>
+					<text id="cell/dec-2-label">
+						<value>8-14 Días</value>
+					</text>
+					<text id="cell/dec-3-label">
+						<value>15-30 Días</value>
+					</text>
+					<text id="cell/dec-4-label">
+						<value>Todo el mes</value>
+					</text>
+					<text id="neighbors-label">
+						<value>VECINOS</value>
+					</text>
+					<text id="neighbors/mort_neighbor-label">
+						<value>¿Sabe usted de alguien que murió en su “barrio”,- (a menos de cinco minutos a pie desde su casa, o su equivalente), después del huracán?</value>
+					</text>
+					<text id="neighbors/mort_neighbor-99-label">
+						<value>No se</value>
+					</text>
+					<text id="neighbors/mort_neighbor-0-label">
+						<value>No</value>
+					</text>
+					<text id="neighbors/mort_neighbor-1-label">
+						<value>1</value>
+					</text>
+					<text id="neighbors/mort_neighbor-2-label">
+						<value>2</value>
+					</text>
+					<text id="neighbors/mort_neighbor-3-label">
+						<value>3</value>
+					</text>
+					<text id="neighbors/mort_neighbor-4-label">
+						<value>4</value>
+					</text>
+					<text id="neighbors/mort_neighbor-5-label">
+						<value>5</value>
+					</text>
+					<text id="neighbors/mort_neighbor-6-label">
+						<value>&gt;5</value>
+					</text>
+					<text id="neighbors/left_neighbor-label">
+						<value>¿Sabe usted de alguien que se fue de su casa y no volvio en su “barrio”,- (a menos de cinco minutos a pie desde su casa, o su equivalente), después del huracán?</value>
+					</text>
+					<text id="neighbors/left_neighbor-99-label">
+						<value>No se</value>
+					</text>
+					<text id="neighbors/left_neighbor-0-label">
+						<value>No</value>
+					</text>
+					<text id="neighbors/left_neighbor-1-label">
+						<value>1</value>
+					</text>
+					<text id="neighbors/left_neighbor-2-label">
+						<value>2</value>
+					</text>
+					<text id="neighbors/left_neighbor-3-label">
+						<value>3</value>
+					</text>
+					<text id="neighbors/left_neighbor-4-label">
+						<value>4</value>
+					</text>
+					<text id="neighbors/left_neighbor-5-label">
+						<value>5</value>
+					</text>
+					<text id="neighbors/left_neighbor-6-label">
+						<value>&gt;5</value>
+					</text>
+					<text id="neighbors/neighbors_num-label">
+						<value>¿Cuántos vecinos tiene usted (a menos de cinco minutos a pie desde su casa, o su equivalente)?</value>
+					</text>
+					<text id="neighbors/neighbors_num-1-label">
+						<value>&lt;10</value>
+					</text>
+					<text id="neighbors/neighbors_num-2-label">
+						<value>10-25</value>
+					</text>
+					<text id="neighbors/neighbors_num-3-label">
+						<value>26-50</value>
+					</text>
+					<text id="neighbors/neighbors_num-4-label">
+						<value>51-100</value>
+					</text>
+					<text id="neighbors/neighbors_num-5-label">
+						<value>&gt;100</value>
+					</text>
+					<text id="notas-label">
+						<value>Notas</value>
+					</text>
+				</translation>
+				<translation lang="en">
+					<text id="casa-label">
+						<value>State of the house</value>
+					</text>
+					<text id="casa-1-label">
+						<value>There is somebody who can give consent</value>
+					</text>
+					<text id="casa-0-label">
+						<value>Nobody available to give consent </value>
+					</text>
+					<text id="consent-label">
+						<value>**Consent:**
+
+Hello! My name is _____________.   
+
+I am working on a research study with public health researchers from Harvard University . My
+local colleagues and I are hoping to get a better understanding of the likely impact of Hurricane
+Maria on mortality rates, comparing mortality in the months before and after the disaster. We are
+particularly interested in hearing from you about your experience.  
+
+We are here in the local area for a few days to conduct our research. As part of the research, we
+would like to ask whether we can interview you. Would you be so kind as to participate in our
+study?
+
+You do not have to participate in the research. Your participation is voluntary. Anything you tell
+us will be completely anonymous, which means we won’t ask for your name or use it in the
+study, and no one will know which answers are yours. All of your answers will be anonymous,
+confidential and private. We will not record your name or anything that would make it possible
+to identify you. If you would like, we can give you more information about the study, what you
+can expect if you participate in the study, and what risks and benefits you may have from
+participating in the study. You have a right to refuse to participate in the study and your right to
+withdraw from the study at any time. There is no penalty should you choose not to participate.
+That is your choice.
+
+If you would like to participate, we would like to ask you questions in a private location to
+ensure your confidentiality is maintained.
+
+Would you like to participate in this study?</value>
+						<value form="markdown">**Consent:**
+
+Hello! My name is _____________.   
+
+I am working on a research study with public health researchers from Harvard University . My
+local colleagues and I are hoping to get a better understanding of the likely impact of Hurricane
+Maria on mortality rates, comparing mortality in the months before and after the disaster. We are
+particularly interested in hearing from you about your experience.  
+
+We are here in the local area for a few days to conduct our research. As part of the research, we
+would like to ask whether we can interview you. Would you be so kind as to participate in our
+study?
+
+You do not have to participate in the research. Your participation is voluntary. Anything you tell
+us will be completely anonymous, which means we won’t ask for your name or use it in the
+study, and no one will know which answers are yours. All of your answers will be anonymous,
+confidential and private. We will not record your name or anything that would make it possible
+to identify you. If you would like, we can give you more information about the study, what you
+can expect if you participate in the study, and what risks and benefits you may have from
+participating in the study. You have a right to refuse to participate in the study and your right to
+withdraw from the study at any time. There is no penalty should you choose not to participate.
+That is your choice.
+
+If you would like to participate, we would like to ask you questions in a private location to
+ensure your confidentiality is maintained.
+
+Would you like to participate in this study?</value>
+					</text>
+					<text id="consent-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="consent-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh_num-label">
+						<value>How many people in total have lived in this house since the January till December of 2017?</value>
+						<value form="markdown">How many people in total have lived in this house since the January till December of 2017?</value>
+					</text>
+					<text id="hh-label">
+						<value>PEOPLE IN THE HOUSE IN 2017</value>
+					</text>
+					<text id="hh/hh_rep/group/person_label-label">
+						<value>**Person # <output value="/data/hh/hh_rep/hh_mem_num" vellum:value="#form/hh/hh_rep/hh_mem_num" />**</value>
+						<value form="markdown">**Person # <output value="/data/hh/hh_rep/hh_mem_num" vellum:value="#form/hh/hh_rep/hh_mem_num" />**</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-label">
+						<value>Gender</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-1-label">
+						<value>Masculine</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-0-label">
+						<value>Femenine</value>
+					</text>
+					<text id="hh/hh_rep/group/gender-2-label">
+						<value>Other</value>
+					</text>
+					<text id="hh/hh_rep/group/age-label">
+						<value>Age</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-label">
+						<value>Did they live here at the beginning of 2017 or did they move in?</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-1-label">
+						<value>Lived here</value>
+					</text>
+					<text id="hh/hh_rep/group/lived_movedin-2-label">
+						<value>They moved into this house</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-label">
+						<value>Which month did they move into this house?</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-1-label">
+						<value>January</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-2-label">
+						<value>Februray</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-3-label">
+						<value>March</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-4-label">
+						<value>Apri</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-5-label">
+						<value>May</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-6-label">
+						<value>June</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-7-label">
+						<value>July</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-8-label">
+						<value>Agust</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-9-label">
+						<value>September</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-10-label">
+						<value>October</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-11-label">
+						<value>November</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_month-12-label">
+						<value>December</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-label">
+						<value>Did they move here because of the hurricane?</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="hh/hh_rep/group/movedin_bc_hurricane-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh/hh_rep/group/status-label">
+						<value>Current status</value>
+					</text>
+					<text id="hh/hh_rep/group/status-1-label">
+						<value>Still living in this house</value>
+					</text>
+					<text id="hh/hh_rep/group/status-2-label">
+						<value>Died in 2017</value>
+					</text>
+					<text id="hh/hh_rep/group/status-3-label">
+						<value>Left in 2017 and didn't return
+</value>
+					</text>
+					<text id="hh/hh_rep/group/status-4-label">
+						<value>Missing
+</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-label">
+						<value>Which month did they go missing?</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-1-label">
+						<value>January</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-2-label">
+						<value>Februrar</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-3-label">
+						<value>March</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-4-label">
+						<value>Apri</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-5-label">
+						<value>May</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-6-label">
+						<value>June</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-7-label">
+						<value>July</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-8-label">
+						<value>Agust</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-9-label">
+						<value>September</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-10-label">
+						<value>October</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-11-label">
+						<value>November</value>
+					</text>
+					<text id="hh/hh_rep/group/missing_month-12-label">
+						<value>December</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-label">
+						<value>Which month did this person leave?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-1-label">
+						<value>January</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-2-label">
+						<value>Februrar</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-3-label">
+						<value>March</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-4-label">
+						<value>Apri</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-5-label">
+						<value>May</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-6-label">
+						<value>June</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-7-label">
+						<value>July</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-8-label">
+						<value>Agust</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-9-label">
+						<value>September</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-10-label">
+						<value>October</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-11-label">
+						<value>November</value>
+					</text>
+					<text id="hh/hh_rep/group/left_month-12-label">
+						<value>December</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-label">
+						<value>Did they leave before or after the hurricane?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-1-label">
+						<value>Before</value>
+					</text>
+					<text id="hh/hh_rep/group/left_b_p_hurricane-2-label">
+						<value>After</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-label">
+						<value>Did they leave because of the hurricane?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="hh/hh_rep/group/left_bc_hurricane-0-label">
+						<value>No</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-label">
+						<value>¿A dónde se fue inicialmente?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-1-label">
+						<value>Somewhere else in Puerto Rico</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-2-label">
+						<value>Florida</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-3-label">
+						<value>New York</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-4-label">
+						<value>Texas</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-5-label">
+						<value>Another state in the USA</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-6-label">
+						<value>Another country outside the USA</value>
+					</text>
+					<text id="hh/hh_rep/group/left_first-0-label">
+						<value>Don't know </value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-label">
+						<value>Where are they now?</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-1-label">
+						<value>Somewhere else in Puerto Rico</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-2-label">
+						<value>Florida</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-3-label">
+						<value>New York</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-4-label">
+						<value>Texas</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-5-label">
+						<value>Another state in the USA</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-6-label">
+						<value>Another country outside the USA</value>
+					</text>
+					<text id="hh/hh_rep/group/left_final-0-label">
+						<value>Don't know </value>
+					</text>
+					<text id="mort-label">
+						<value>PEOPLE THAT DIED IN 2017</value>
+					</text>
+					<text id="mort/rep/group/label-label">
+						<value>Persona #: <output value="../../count" />
+Edad: <output value="../age" />
+Género: <output value="../sex" /></value>
+					</text>
+					<text id="mort/rep/group/died_month-label">
+						<value>Which month did this person die?</value>
+					</text>
+					<text id="mort/rep/group/died_month-1-label">
+						<value>January</value>
+					</text>
+					<text id="mort/rep/group/died_month-2-label">
+						<value>Februrar</value>
+					</text>
+					<text id="mort/rep/group/died_month-3-label">
+						<value>March</value>
+					</text>
+					<text id="mort/rep/group/died_month-4-label">
+						<value>Apri</value>
+					</text>
+					<text id="mort/rep/group/died_month-5-label">
+						<value>May</value>
+					</text>
+					<text id="mort/rep/group/died_month-6-label">
+						<value>June</value>
+					</text>
+					<text id="mort/rep/group/died_month-7-label">
+						<value>July</value>
+					</text>
+					<text id="mort/rep/group/died_month-8-label">
+						<value>Agust</value>
+					</text>
+					<text id="mort/rep/group/died_month-9-label">
+						<value>September</value>
+					</text>
+					<text id="mort/rep/group/died_month-10-label">
+						<value>October</value>
+					</text>
+					<text id="mort/rep/group/died_month-11-label">
+						<value>November</value>
+					</text>
+					<text id="mort/rep/group/died_month-12-label">
+						<value>December</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-label">
+						<value>Did they die before or after the hurricane?</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-1-label">
+						<value>Before</value>
+					</text>
+					<text id="mort/rep/group/died_b_p_hurricane-2-label">
+						<value>After</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-label">
+						<value>What was the cause of death?</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-1-label">
+						<value>Trauma (vehicle accident)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-2-label">
+						<value>Trauma (building collapse)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-3-label">
+						<value>Trauma (landslide)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-4-label">
+						<value>Trauma (other)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-5-label">
+						<value>Drowned</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-6-label">
+						<value>Fire</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-7-label">
+						<value>Electrocution</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-8-label">
+						<value>Interruption of necessary medical services( medications, dialysis, doctor visit...)</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-9-label">
+						<value>Medical complications from an injury, trauma or illness directly due to the hurricane</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-10-label">
+						<value>Suicide</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-99-label">
+						<value>Other reason
+</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death-0-label">
+						<value>Causes unrelated to the hurricane</value>
+					</text>
+					<text id="mort/rep/group/cause_of_death_ot-label">
+						<value>Please describe the cause of death</value>
+					</text>
+					<text id="access_med-label">
+						<value>ACCESS TO MEDICAL CARE</value>
+					</text>
+					<text id="access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes-label">
+						<value>**Did the hurricane lead to any of the following problems among members in your household that didn’t exist before the hurricane?**</value>
+						<value form="markdown">**Did the hurricane lead to any of the following problems among members in your household that didn’t exist before the hurricane?**</value>
+					</text>
+					<text id="access_med/no_911-label">
+						<value>Unable to get to medical care because 911 was not available</value>
+					</text>
+					<text id="access_med/no_911-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_911-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_911-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_911-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_911-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_911-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_911-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_911-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/no_transport-label">
+						<value>Unable to get to medical care because there were no other means of transport</value>
+					</text>
+					<text id="access_med/no_transport-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_transport-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_transport-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_transport-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_transport-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_transport-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_transport-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_transport-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/roads_damaged-label">
+						<value>Unable to get to medical care because the roads were damaged</value>
+					</text>
+					<text id="access_med/roads_damaged-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/roads_damaged-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/roads_damaged-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/roads_damaged-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/roads_damaged-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/roads_damaged-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/roads_damaged-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/roads_damaged-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/facility_closed-label">
+						<value>Unable to get medical care because the healthcare facility was damaged or closed</value>
+					</text>
+					<text id="access_med/facility_closed-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/facility_closed-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/facility_closed-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/facility_closed-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/facility_closed-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/facility_closed-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/facility_closed-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/facility_closed-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/no_doctors-label">
+						<value>Unable to get medical care because the doctors were not there</value>
+					</text>
+					<text id="access_med/no_doctors-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_doctors-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_doctors-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_doctors-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_doctors-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_doctors-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_doctors-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_doctors-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/no_dialysis-label">
+						<value>Unable to continue dialysis</value>
+					</text>
+					<text id="access_med/no_dialysis-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_dialysis-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_dialysis-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_dialysis-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_dialysis-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_dialysis-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_dialysis-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_dialysis-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/no_resp_mach-label">
+						<value>Unable to use breathing treatment that required electricity (CPAP, BiPAP or nebulizer)</value>
+					</text>
+					<text id="access_med/no_resp_mach-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_resp_mach-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_resp_mach-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_resp_mach-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_resp_mach-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_resp_mach-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_resp_mach-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_resp_mach-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/no_meds-label">
+						<value>Unable to get medicines</value>
+					</text>
+					<text id="access_med/no_meds-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/no_meds-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/no_meds-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/no_meds-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/no_meds-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/no_meds-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/no_meds-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/no_meds-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/couldnt_afford-label">
+						<value>Unable to afford care</value>
+					</text>
+					<text id="access_med/couldnt_afford-99-label">
+						<value>NA</value>
+					</text>
+					<text id="access_med/couldnt_afford-0-label">
+						<value>0 days</value>
+					</text>
+					<text id="access_med/couldnt_afford-1-label">
+						<value>1 day</value>
+					</text>
+					<text id="access_med/couldnt_afford-2-label">
+						<value>2 days          </value>
+					</text>
+					<text id="access_med/couldnt_afford-3-label">
+						<value>3-7 days</value>
+					</text>
+					<text id="access_med/couldnt_afford-4-label">
+						<value>8-30 days</value>
+					</text>
+					<text id="access_med/couldnt_afford-5-label">
+						<value>&gt; 30 days</value>
+					</text>
+					<text id="access_med/couldnt_afford-6-label">
+						<value>Still unresolved problem</value>
+					</text>
+					<text id="access_med/ot_reasons-label">
+						<value>Other reasons</value>
+					</text>
+					<text id="access_med/access_other-label">
+						<value>Did you access medical care at another facility?</value>
+					</text>
+					<text id="access_med/access_other-0-label">
+						<value>No</value>
+					</text>
+					<text id="access_med/access_other-1-label">
+						<value>Yes at another Puerto Rican health facility</value>
+					</text>
+					<text id="access_med/access_other-2-label">
+						<value>Yes at a temporary aid center </value>
+					</text>
+					<text id="water-label">
+						<value>WATER</value>
+					</text>
+					<text id="water/water_short_b-label">
+						<value>Did you have water shortages before the hurricane?</value>
+					</text>
+					<text id="water/water_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/water_short_b-1-label">
+						<value>Once a day
+</value>
+					</text>
+					<text id="water/water_short_b-2-label">
+						<value>Once a week</value>
+					</text>
+					<text id="water/water_short_b-3-label">
+						<value>Once a month</value>
+					</text>
+					<text id="water/water_short_b-4-label">
+						<value>Rarely</value>
+					</text>
+					<text id="water/lost_water-label">
+						<value>Have you lost water service after the hurricane?</value>
+					</text>
+					<text id="water/lost_water-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="water/lost_water-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/label-label">
+						<value>**For how many days per month do you not have water?**</value>
+						<value form="markdown">**For how many days per month do you not have water?**</value>
+					</text>
+					<text id="water/label-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/label-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/label-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/label-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/label-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/sept-label">
+						<value>September</value>
+					</text>
+					<text id="water/sept-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/sept-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/sept-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/sept-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/sept-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/oct-label">
+						<value>October</value>
+					</text>
+					<text id="water/oct-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/oct-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/oct-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/oct-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/oct-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/nov-label">
+						<value>November</value>
+					</text>
+					<text id="water/nov-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/nov-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/nov-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/nov-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/nov-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/dec-label">
+						<value>December</value>
+					</text>
+					<text id="water/dec-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/dec-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/dec-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/dec-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/dec-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/lost_drink_water-label">
+						<value>Did you lose access to drinkable water after the hurricane?</value>
+					</text>
+					<text id="water/lost_drink_water-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="water/lost_drink_water-0-label">
+						<value>No</value>
+					</text>
+					<text id="water/lost_drink_water-3-label">
+						<value>No tenia agua potable antes</value>
+					</text>
+					<text id="water/lable_2-label">
+						<value>**For how many days per month do you not have drinkable water?**</value>
+						<value form="markdown">**For how many days per month do you not have drinkable water?**</value>
+					</text>
+					<text id="water/lable_2-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/lable_2-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/lable_2-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/lable_2-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/lable_2-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/sept_drink-label">
+						<value>September</value>
+					</text>
+					<text id="water/sept_drink-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/sept_drink-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/sept_drink-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/sept_drink-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/sept_drink-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/copy-1-of-oct-label">
+						<value>October</value>
+					</text>
+					<text id="water/copy-1-of-oct-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/copy-1-of-oct-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/copy-1-of-oct-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/copy-1-of-oct-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/copy-1-of-oct-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/copy-1-of-nov-label">
+						<value>November</value>
+					</text>
+					<text id="water/copy-1-of-nov-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/copy-1-of-nov-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/copy-1-of-nov-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/copy-1-of-nov-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/copy-1-of-nov-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/copy-1-of-dec-label">
+						<value>December</value>
+					</text>
+					<text id="water/copy-1-of-dec-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="water/copy-1-of-dec-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="water/copy-1-of-dec-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="water/copy-1-of-dec-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="water/copy-1-of-dec-4-label">
+						<value>All month</value>
+					</text>
+					<text id="water/drinkable_water_now-label">
+						<value>Where do you get your drinkable water from now?</value>
+					</text>
+					<text id="water/drinkable_water_now-1-label">
+						<value>I buy drinking water</value>
+					</text>
+					<text id="water/drinkable_water_now-2-label">
+						<value>From a natural source (untreated)</value>
+					</text>
+					<text id="water/drinkable_water_now-3-label">
+						<value>From a natural source (treated)</value>
+					</text>
+					<text id="electricity-label">
+						<value>ELECTRICITY</value>
+					</text>
+					<text id="electricity/elec_short_b-label">
+						<value>Did you have power shortages before the hurricane?</value>
+					</text>
+					<text id="electricity/elec_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="electricity/elec_short_b-1-label">
+						<value>Once a day
+</value>
+					</text>
+					<text id="electricity/elec_short_b-2-label">
+						<value>Once a week</value>
+					</text>
+					<text id="electricity/elec_short_b-3-label">
+						<value>Once a month</value>
+					</text>
+					<text id="electricity/elec_short_b-4-label">
+						<value>Rarely</value>
+					</text>
+					<text id="electricity/lost_elec-label">
+						<value>Have you lost power after the hurricane?</value>
+					</text>
+					<text id="electricity/lost_elec-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="electricity/lost_elec-0-label">
+						<value>No</value>
+					</text>
+					<text id="electricity/label-label">
+						<value>**For how many days per month did you lose electricity?**</value>
+						<value form="markdown">**For how many days per month did you lose electricity?**</value>
+					</text>
+					<text id="electricity/label-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="electricity/label-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="electricity/label-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="electricity/label-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="electricity/label-4-label">
+						<value>All month</value>
+					</text>
+					<text id="electricity/sept-label">
+						<value>September</value>
+					</text>
+					<text id="electricity/sept-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="electricity/sept-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="electricity/sept-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="electricity/sept-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="electricity/sept-4-label">
+						<value>All month</value>
+					</text>
+					<text id="electricity/oct-label">
+						<value>October</value>
+					</text>
+					<text id="electricity/oct-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="electricity/oct-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="electricity/oct-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="electricity/oct-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="electricity/oct-4-label">
+						<value>All month</value>
+					</text>
+					<text id="electricity/nov-label">
+						<value>November</value>
+					</text>
+					<text id="electricity/nov-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="electricity/nov-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="electricity/nov-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="electricity/nov-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="electricity/nov-4-label">
+						<value>All month</value>
+					</text>
+					<text id="electricity/dec-label">
+						<value>December</value>
+					</text>
+					<text id="electricity/dec-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="electricity/dec-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="electricity/dec-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="electricity/dec-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="electricity/dec-4-label">
+						<value>All month</value>
+					</text>
+					<text id="cell-label">
+						<value>MOBILE NETWORK</value>
+					</text>
+					<text id="cell/cell_short_b-label">
+						<value>How often did you lose access to mobile networks before the hurricane?</value>
+					</text>
+					<text id="cell/cell_short_b-0-label">
+						<value>No</value>
+					</text>
+					<text id="cell/cell_short_b-1-label">
+						<value>Once a day
+</value>
+					</text>
+					<text id="cell/cell_short_b-2-label">
+						<value>Once a week</value>
+					</text>
+					<text id="cell/cell_short_b-3-label">
+						<value>Once a month</value>
+					</text>
+					<text id="cell/cell_short_b-4-label">
+						<value>Rarely</value>
+					</text>
+					<text id="cell/lost_cell-label">
+						<value>Have you lost access to the cell network after the hurricane?</value>
+					</text>
+					<text id="cell/lost_cell-1-label">
+						<value>Yes</value>
+					</text>
+					<text id="cell/lost_cell-0-label">
+						<value>No</value>
+					</text>
+					<text id="cell/label-label">
+						<value>**For how many days per month did you lose access to the cellular netowork?**</value>
+						<value form="markdown">**For how many days per month did you lose access to the cellular netowork?**</value>
+					</text>
+					<text id="cell/label-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="cell/label-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="cell/label-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="cell/label-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="cell/label-4-label">
+						<value>All month</value>
+					</text>
+					<text id="cell/sept-label">
+						<value>September</value>
+					</text>
+					<text id="cell/sept-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="cell/sept-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="cell/sept-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="cell/sept-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="cell/sept-4-label">
+						<value>All month</value>
+					</text>
+					<text id="cell/oct-label">
+						<value>October</value>
+					</text>
+					<text id="cell/oct-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="cell/oct-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="cell/oct-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="cell/oct-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="cell/oct-4-label">
+						<value>All month</value>
+					</text>
+					<text id="cell/nov-label">
+						<value>November</value>
+					</text>
+					<text id="cell/nov-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="cell/nov-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="cell/nov-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="cell/nov-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="cell/nov-4-label">
+						<value>All month</value>
+					</text>
+					<text id="cell/dec-label">
+						<value>December</value>
+					</text>
+					<text id="cell/dec-0-label">
+						<value>0 days</value>
+						<value form="markdown">0 days</value>
+					</text>
+					<text id="cell/dec-1-label">
+						<value>1-7 days</value>
+					</text>
+					<text id="cell/dec-2-label">
+						<value>8-14 days</value>
+					</text>
+					<text id="cell/dec-3-label">
+						<value>15-30 days</value>
+					</text>
+					<text id="cell/dec-4-label">
+						<value>All month</value>
+					</text>
+					<text id="neighbors-label">
+						<value>NEIGHBORS</value>
+					</text>
+					<text id="neighbors/mort_neighbor-label">
+						<value>Do you know of anyone who died in your “barrio”, or how many neighbors - (within five minutes walking distance from your house, or equivalent), since the hurricane?</value>
+					</text>
+					<text id="neighbors/mort_neighbor-99-label">
+						<value>I don't know</value>
+					</text>
+					<text id="neighbors/mort_neighbor-0-label">
+						<value>No</value>
+					</text>
+					<text id="neighbors/mort_neighbor-1-label">
+						<value>1</value>
+					</text>
+					<text id="neighbors/mort_neighbor-2-label">
+						<value>2</value>
+					</text>
+					<text id="neighbors/mort_neighbor-3-label">
+						<value>3</value>
+					</text>
+					<text id="neighbors/mort_neighbor-4-label">
+						<value>4</value>
+					</text>
+					<text id="neighbors/mort_neighbor-5-label">
+						<value>5</value>
+					</text>
+					<text id="neighbors/mort_neighbor-6-label">
+						<value>&gt;5</value>
+					</text>
+					<text id="neighbors/left_neighbor-label">
+						<value>Do you know of anyone who left their house in your “barrio”, or how many neighbors - (within five minutes walking distance from your house, or equivalent), since the hurricane?</value>
+					</text>
+					<text id="neighbors/left_neighbor-99-label">
+						<value>I don't know</value>
+					</text>
+					<text id="neighbors/left_neighbor-0-label">
+						<value>No</value>
+					</text>
+					<text id="neighbors/left_neighbor-1-label">
+						<value>1</value>
+					</text>
+					<text id="neighbors/left_neighbor-2-label">
+						<value>2</value>
+					</text>
+					<text id="neighbors/left_neighbor-3-label">
+						<value>3</value>
+					</text>
+					<text id="neighbors/left_neighbor-4-label">
+						<value>4</value>
+					</text>
+					<text id="neighbors/left_neighbor-5-label">
+						<value>5</value>
+					</text>
+					<text id="neighbors/left_neighbor-6-label">
+						<value>&gt;5</value>
+					</text>
+					<text id="neighbors/neighbors_num-label">
+						<value>How many neighbors do you have?</value>
+					</text>
+					<text id="neighbors/neighbors_num-1-label">
+						<value>&lt;10</value>
+					</text>
+					<text id="neighbors/neighbors_num-2-label">
+						<value>10-25</value>
+					</text>
+					<text id="neighbors/neighbors_num-3-label">
+						<value>26-50</value>
+					</text>
+					<text id="neighbors/neighbors_num-4-label">
+						<value>51-100</value>
+					</text>
+					<text id="neighbors/neighbors_num-5-label">
+						<value>&gt;100</value>
+					</text>
+					<text id="notas-label">
+						<value>Notes</value>
+					</text>
+				</translation>
+			</itext>
+		</model>
+	</h:head>
+	<h:body>
+		<select1 vellum:ref="#form/casa" ref="/data/casa">
+			<label ref="jr:itext('casa-label')" />
+			<item>
+				<label ref="jr:itext('casa-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('casa-0-label')" />
+				<value>0</value>
+			</item>
+		</select1>
+		<select1 vellum:ref="#form/consent" ref="/data/consent">
+			<label ref="jr:itext('consent-label')" />
+			<item>
+				<label ref="jr:itext('consent-1-label')" />
+				<value>1</value>
+			</item>
+			<item>
+				<label ref="jr:itext('consent-0-label')" />
+				<value>0</value>
+			</item>
+		</select1>
+		<input vellum:ref="#form/hh_num" ref="/data/hh_num">
+			<label ref="jr:itext('hh_num-label')" />
+		</input>
+		<group vellum:ref="#form/hh" ref="/data/hh" appearance="field-list">
+			<label ref="jr:itext('hh-label')" />
+			<group>
+				<repeat vellum:jr__count="#form/hh_num" jr:count="/data/hh_num" jr:noAddRemove="true()" vellum:nodeset="#form/hh/hh_rep" nodeset="/data/hh/hh_rep">
+					<group vellum:ref="#form/hh/hh_rep/group" ref="/data/hh/hh_rep/group">
+						<trigger vellum:ref="#form/hh/hh_rep/group/person_label" ref="/data/hh/hh_rep/group/person_label" appearance="minimal">
+							<label ref="jr:itext('hh/hh_rep/group/person_label-label')" />
+						</trigger>
+						<select1 vellum:ref="#form/hh/hh_rep/group/gender" ref="/data/hh/hh_rep/group/gender">
+							<label ref="jr:itext('hh/hh_rep/group/gender-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/gender-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/gender-0-label')" />
+								<value>0</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/gender-2-label')" />
+								<value>2</value>
+							</item>
+						</select1>
+						<input vellum:ref="#form/hh/hh_rep/group/age" ref="/data/hh/hh_rep/group/age">
+							<label ref="jr:itext('hh/hh_rep/group/age-label')" />
+						</input>
+						<select1 vellum:ref="#form/hh/hh_rep/group/lived_movedin" ref="/data/hh/hh_rep/group/lived_movedin">
+							<label ref="jr:itext('hh/hh_rep/group/lived_movedin-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/lived_movedin-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/lived_movedin-2-label')" />
+								<value>2</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/movedin_month" ref="/data/hh/hh_rep/group/movedin_month">
+							<label ref="jr:itext('hh/hh_rep/group/movedin_month-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-7-label')" />
+								<value>7</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-8-label')" />
+								<value>8</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-9-label')" />
+								<value>9</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-10-label')" />
+								<value>10</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-11-label')" />
+								<value>11</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_month-12-label')" />
+								<value>12</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/movedin_bc_hurricane" ref="/data/hh/hh_rep/group/movedin_bc_hurricane">
+							<label ref="jr:itext('hh/hh_rep/group/movedin_bc_hurricane-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_bc_hurricane-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/movedin_bc_hurricane-0-label')" />
+								<value>0</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/status" ref="/data/hh/hh_rep/group/status">
+							<label ref="jr:itext('hh/hh_rep/group/status-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/status-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/status-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/status-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/status-4-label')" />
+								<value>4</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/missing_month" ref="/data/hh/hh_rep/group/missing_month">
+							<label ref="jr:itext('hh/hh_rep/group/missing_month-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-7-label')" />
+								<value>7</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-8-label')" />
+								<value>8</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-9-label')" />
+								<value>9</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-10-label')" />
+								<value>10</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-11-label')" />
+								<value>11</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/missing_month-12-label')" />
+								<value>12</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/left_month" ref="/data/hh/hh_rep/group/left_month">
+							<label ref="jr:itext('hh/hh_rep/group/left_month-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-7-label')" />
+								<value>7</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-8-label')" />
+								<value>8</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-9-label')" />
+								<value>9</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-10-label')" />
+								<value>10</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-11-label')" />
+								<value>11</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_month-12-label')" />
+								<value>12</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/left_b_p_hurricane" ref="/data/hh/hh_rep/group/left_b_p_hurricane">
+							<label ref="jr:itext('hh/hh_rep/group/left_b_p_hurricane-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_b_p_hurricane-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_b_p_hurricane-2-label')" />
+								<value>2</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/left_bc_hurricane" ref="/data/hh/hh_rep/group/left_bc_hurricane">
+							<label ref="jr:itext('hh/hh_rep/group/left_bc_hurricane-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_bc_hurricane-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_bc_hurricane-0-label')" />
+								<value>0</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/left_first" ref="/data/hh/hh_rep/group/left_first">
+							<label ref="jr:itext('hh/hh_rep/group/left_first-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_first-0-label')" />
+								<value>0</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/hh/hh_rep/group/left_final" ref="/data/hh/hh_rep/group/left_final">
+							<label ref="jr:itext('hh/hh_rep/group/left_final-label')" />
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('hh/hh_rep/group/left_final-0-label')" />
+								<value>0</value>
+							</item>
+						</select1>
+					</group>
+				</repeat>
+			</group>
+		</group>
+		<group vellum:ref="#form/mort" ref="/data/mort" appearance="field-list">
+			<label ref="jr:itext('mort-label')" />
+			<group>
+				<repeat vellum:jr__count="#form/hh_num" jr:count="/data/hh_num" jr:noAddRemove="true()" vellum:nodeset="#form/mort/rep" nodeset="/data/mort/rep">
+					<group vellum:ref="#form/mort/rep/group" ref="/data/mort/rep/group">
+						<trigger vellum:ref="#form/mort/rep/group/label" ref="/data/mort/rep/group/label" appearance="minimal">
+							<label ref="jr:itext('mort/rep/group/label-label')" />
+						</trigger>
+						<select1 vellum:ref="#form/mort/rep/group/died_month" ref="/data/mort/rep/group/died_month">
+							<label ref="jr:itext('mort/rep/group/died_month-label')" />
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-7-label')" />
+								<value>7</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-8-label')" />
+								<value>8</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-9-label')" />
+								<value>9</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-10-label')" />
+								<value>10</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-11-label')" />
+								<value>11</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_month-12-label')" />
+								<value>12</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/mort/rep/group/died_b_p_hurricane" ref="/data/mort/rep/group/died_b_p_hurricane">
+							<label ref="jr:itext('mort/rep/group/died_b_p_hurricane-label')" />
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_b_p_hurricane-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/died_b_p_hurricane-2-label')" />
+								<value>2</value>
+							</item>
+						</select1>
+						<select1 vellum:ref="#form/mort/rep/group/cause_of_death" ref="/data/mort/rep/group/cause_of_death">
+							<label ref="jr:itext('mort/rep/group/cause_of_death-label')" />
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-1-label')" />
+								<value>1</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-2-label')" />
+								<value>2</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-3-label')" />
+								<value>3</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-4-label')" />
+								<value>4</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-5-label')" />
+								<value>5</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-6-label')" />
+								<value>6</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-7-label')" />
+								<value>7</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-8-label')" />
+								<value>8</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-9-label')" />
+								<value>9</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-10-label')" />
+								<value>10</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-99-label')" />
+								<value>99</value>
+							</item>
+							<item>
+								<label ref="jr:itext('mort/rep/group/cause_of_death-0-label')" />
+								<value>0</value>
+							</item>
+						</select1>
+						<input vellum:ref="#form/mort/rep/group/cause_of_death_ot" ref="/data/mort/rep/group/cause_of_death_ot">
+							<label ref="jr:itext('mort/rep/group/cause_of_death_ot-label')" />
+						</input>
+					</group>
+				</repeat>
+			</group>
+		</group>
+		<group vellum:ref="#form/access_med" ref="/data/access_med" appearance="field-list">
+			<label ref="jr:itext('access_med-label')" />
+			<trigger vellum:ref="#form/access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes" ref="/data/access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes" appearance="minimal">
+				<label ref="jr:itext('access_med/afect_el_huracn_a_alguien_viviendo_en_la_casa_con_algunos_de_los_siguientes-label')" />
+			</trigger>
+			<select1 vellum:ref="#form/access_med/no_911" ref="/data/access_med/no_911">
+				<label ref="jr:itext('access_med/no_911-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_911-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_911-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/no_transport" ref="/data/access_med/no_transport">
+				<label ref="jr:itext('access_med/no_transport-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_transport-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_transport-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/roads_damaged" ref="/data/access_med/roads_damaged">
+				<label ref="jr:itext('access_med/roads_damaged-label')" />
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/roads_damaged-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/facility_closed" ref="/data/access_med/facility_closed">
+				<label ref="jr:itext('access_med/facility_closed-label')" />
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/facility_closed-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/no_doctors" ref="/data/access_med/no_doctors">
+				<label ref="jr:itext('access_med/no_doctors-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_doctors-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/no_dialysis" ref="/data/access_med/no_dialysis">
+				<label ref="jr:itext('access_med/no_dialysis-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_dialysis-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/no_resp_mach" ref="/data/access_med/no_resp_mach">
+				<label ref="jr:itext('access_med/no_resp_mach-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_resp_mach-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/no_meds" ref="/data/access_med/no_meds">
+				<label ref="jr:itext('access_med/no_meds-label')" />
+				<item>
+					<label ref="jr:itext('access_med/no_meds-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/no_meds-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/access_med/couldnt_afford" ref="/data/access_med/couldnt_afford">
+				<label ref="jr:itext('access_med/couldnt_afford-label')" />
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/couldnt_afford-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<input vellum:ref="#form/access_med/ot_reasons" ref="/data/access_med/ot_reasons">
+				<label ref="jr:itext('access_med/ot_reasons-label')" />
+			</input>
+			<select1 vellum:ref="#form/access_med/access_other" ref="/data/access_med/access_other">
+				<label ref="jr:itext('access_med/access_other-label')" />
+				<item>
+					<label ref="jr:itext('access_med/access_other-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/access_other-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('access_med/access_other-2-label')" />
+					<value>2</value>
+				</item>
+			</select1>
+		</group>
+		<group vellum:ref="#form/water" ref="/data/water" appearance="field-list">
+			<label ref="jr:itext('water-label')" />
+			<select1 vellum:ref="#form/water/water_short_b" ref="/data/water/water_short_b">
+				<label ref="jr:itext('water/water_short_b-label')" />
+				<item>
+					<label ref="jr:itext('water/water_short_b-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/water_short_b-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/water_short_b-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/water_short_b-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/water_short_b-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/lost_water" ref="/data/water/lost_water">
+				<label ref="jr:itext('water/lost_water-label')" />
+				<item>
+					<label ref="jr:itext('water/lost_water-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lost_water-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/label" ref="/data/water/label" appearance="label">
+				<label ref="jr:itext('water/label-label')" />
+				<item>
+					<label ref="jr:itext('water/label-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/label-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/label-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/label-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/label-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/sept" ref="/data/water/sept" appearance="list-nolabel">
+				<label ref="jr:itext('water/sept-label')" />
+				<item>
+					<label ref="jr:itext('water/sept-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/oct" ref="/data/water/oct" appearance="list-nolabel">
+				<label ref="jr:itext('water/oct-label')" />
+				<item>
+					<label ref="jr:itext('water/oct-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/oct-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/oct-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/oct-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/oct-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/nov" ref="/data/water/nov" appearance="list-nolabel">
+				<label ref="jr:itext('water/nov-label')" />
+				<item>
+					<label ref="jr:itext('water/nov-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/nov-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/nov-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/nov-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/nov-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/dec" ref="/data/water/dec" appearance="list-nolabel">
+				<label ref="jr:itext('water/dec-label')" />
+				<item>
+					<label ref="jr:itext('water/dec-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/dec-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/dec-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/dec-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/dec-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/lost_drink_water" ref="/data/water/lost_drink_water">
+				<label ref="jr:itext('water/lost_drink_water-label')" />
+				<item>
+					<label ref="jr:itext('water/lost_drink_water-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lost_drink_water-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lost_drink_water-3-label')" />
+					<value>3</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/lable_2" ref="/data/water/lable_2" appearance="label">
+				<label ref="jr:itext('water/lable_2-label')" />
+				<item>
+					<label ref="jr:itext('water/lable_2-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lable_2-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lable_2-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lable_2-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/lable_2-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/sept_drink" ref="/data/water/sept_drink" appearance="list-nolabel">
+				<label ref="jr:itext('water/sept_drink-label')" />
+				<item>
+					<label ref="jr:itext('water/sept_drink-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept_drink-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept_drink-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept_drink-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/sept_drink-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/copy-1-of-oct" ref="/data/water/copy-1-of-oct" appearance="list-nolabel">
+				<label ref="jr:itext('water/copy-1-of-oct-label')" />
+				<item>
+					<label ref="jr:itext('water/copy-1-of-oct-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-oct-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-oct-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-oct-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-oct-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/copy-1-of-nov" ref="/data/water/copy-1-of-nov" appearance="list-nolabel">
+				<label ref="jr:itext('water/copy-1-of-nov-label')" />
+				<item>
+					<label ref="jr:itext('water/copy-1-of-nov-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-nov-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-nov-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-nov-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-nov-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/copy-1-of-dec" ref="/data/water/copy-1-of-dec" appearance="list-nolabel">
+				<label ref="jr:itext('water/copy-1-of-dec-label')" />
+				<item>
+					<label ref="jr:itext('water/copy-1-of-dec-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-dec-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-dec-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-dec-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/copy-1-of-dec-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/water/drinkable_water_now" ref="/data/water/drinkable_water_now">
+				<label ref="jr:itext('water/drinkable_water_now-label')" />
+				<item>
+					<label ref="jr:itext('water/drinkable_water_now-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/drinkable_water_now-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('water/drinkable_water_now-3-label')" />
+					<value>3</value>
+				</item>
+			</select1>
+		</group>
+		<group vellum:ref="#form/electricity" ref="/data/electricity" appearance="field-list">
+			<label ref="jr:itext('electricity-label')" />
+			<select1 vellum:ref="#form/electricity/elec_short_b" ref="/data/electricity/elec_short_b">
+				<label ref="jr:itext('electricity/elec_short_b-label')" />
+				<item>
+					<label ref="jr:itext('electricity/elec_short_b-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/elec_short_b-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/elec_short_b-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/elec_short_b-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/elec_short_b-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/lost_elec" ref="/data/electricity/lost_elec">
+				<label ref="jr:itext('electricity/lost_elec-label')" />
+				<item>
+					<label ref="jr:itext('electricity/lost_elec-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/lost_elec-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/label" ref="/data/electricity/label" appearance="label">
+				<label ref="jr:itext('electricity/label-label')" />
+				<item>
+					<label ref="jr:itext('electricity/label-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/label-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/label-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/label-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/label-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/sept" ref="/data/electricity/sept" appearance="list-nolabel">
+				<label ref="jr:itext('electricity/sept-label')" />
+				<item>
+					<label ref="jr:itext('electricity/sept-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/sept-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/sept-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/sept-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/sept-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/oct" ref="/data/electricity/oct" appearance="list-nolabel">
+				<label ref="jr:itext('electricity/oct-label')" />
+				<item>
+					<label ref="jr:itext('electricity/oct-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/oct-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/oct-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/oct-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/oct-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/nov" ref="/data/electricity/nov" appearance="list-nolabel">
+				<label ref="jr:itext('electricity/nov-label')" />
+				<item>
+					<label ref="jr:itext('electricity/nov-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/nov-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/nov-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/nov-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/nov-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/electricity/dec" ref="/data/electricity/dec" appearance="list-nolabel">
+				<label ref="jr:itext('electricity/dec-label')" />
+				<item>
+					<label ref="jr:itext('electricity/dec-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/dec-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/dec-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/dec-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('electricity/dec-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+		</group>
+		<group vellum:ref="#form/cell" ref="/data/cell" appearance="field-list">
+			<label ref="jr:itext('cell-label')" />
+			<select1 vellum:ref="#form/cell/cell_short_b" ref="/data/cell/cell_short_b">
+				<label ref="jr:itext('cell/cell_short_b-label')" />
+				<item>
+					<label ref="jr:itext('cell/cell_short_b-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/cell_short_b-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/cell_short_b-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/cell_short_b-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/cell_short_b-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/lost_cell" ref="/data/cell/lost_cell">
+				<label ref="jr:itext('cell/lost_cell-label')" />
+				<item>
+					<label ref="jr:itext('cell/lost_cell-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/lost_cell-0-label')" />
+					<value>0</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/label" ref="/data/cell/label" appearance="label">
+				<label ref="jr:itext('cell/label-label')" />
+				<item>
+					<label ref="jr:itext('cell/label-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/label-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/label-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/label-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/label-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/sept" ref="/data/cell/sept" appearance="list-nolabel">
+				<label ref="jr:itext('cell/sept-label')" />
+				<item>
+					<label ref="jr:itext('cell/sept-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/sept-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/sept-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/sept-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/sept-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/oct" ref="/data/cell/oct" appearance="list-nolabel">
+				<label ref="jr:itext('cell/oct-label')" />
+				<item>
+					<label ref="jr:itext('cell/oct-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/oct-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/oct-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/oct-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/oct-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/nov" ref="/data/cell/nov" appearance="list-nolabel">
+				<label ref="jr:itext('cell/nov-label')" />
+				<item>
+					<label ref="jr:itext('cell/nov-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/nov-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/nov-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/nov-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/nov-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/cell/dec" ref="/data/cell/dec" appearance="list-nolabel">
+				<label ref="jr:itext('cell/dec-label')" />
+				<item>
+					<label ref="jr:itext('cell/dec-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/dec-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/dec-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/dec-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('cell/dec-4-label')" />
+					<value>4</value>
+				</item>
+			</select1>
+		</group>
+		<group vellum:ref="#form/neighbors" ref="/data/neighbors" appearance="field-list">
+			<label ref="jr:itext('neighbors-label')" />
+			<select1 vellum:ref="#form/neighbors/mort_neighbor" ref="/data/neighbors/mort_neighbor">
+				<label ref="jr:itext('neighbors/mort_neighbor-label')" />
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/mort_neighbor-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/neighbors/left_neighbor" ref="/data/neighbors/left_neighbor">
+				<label ref="jr:itext('neighbors/left_neighbor-label')" />
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-99-label')" />
+					<value>99</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-0-label')" />
+					<value>0</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-5-label')" />
+					<value>5</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/left_neighbor-6-label')" />
+					<value>6</value>
+				</item>
+			</select1>
+			<select1 vellum:ref="#form/neighbors/neighbors_num" ref="/data/neighbors/neighbors_num">
+				<label ref="jr:itext('neighbors/neighbors_num-label')" />
+				<item>
+					<label ref="jr:itext('neighbors/neighbors_num-1-label')" />
+					<value>1</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/neighbors_num-2-label')" />
+					<value>2</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/neighbors_num-3-label')" />
+					<value>3</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/neighbors_num-4-label')" />
+					<value>4</value>
+				</item>
+				<item>
+					<label ref="jr:itext('neighbors/neighbors_num-5-label')" />
+					<value>5</value>
+				</item>
+			</select1>
+		</group>
+		<input vellum:ref="#form/notas" ref="/data/notas">
+			<label ref="jr:itext('notas-label')" />
+		</input>
+	</h:body>
+</h:html>
