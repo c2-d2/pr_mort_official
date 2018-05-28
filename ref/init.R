@@ -177,7 +177,7 @@ households <- over_near(households, sel)
 #generate weights for all barrios in the dataframe
 weights <- create_weights(barrio_frame, households)
 
-write.csv(weights, "../data/weights.csv")
+write.csv(weights, "../data/weights.csv", row.names = F)
 
 #variables in 'weights'
 ##id: id number of barrio
