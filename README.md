@@ -5,6 +5,10 @@ Here we provide the data and pipeline for:  [**Mortality in Puerto Rico after Hu
 
 > Kishore N, Marqués D, Mahmud A, et al. Mortality in Puerto Rico after Hurricane Maria. N Engl J Med. DOI: 10.1056/NEJMsa1803972
 
+# Additional Resources 
+1) [FAQs](https://github.com/c2-d2/pr_mort_official/blob/master/misc/faq.md)
+2) [Responses to Inquiries](https://github.com/c2-d2/pr_mort_official/blob/master/misc/inquiries.md)
+
 # Abstract
 
 **Background:** 
