@@ -18,7 +18,7 @@ What is the bottom line?
 -   We estimated that the mortality rate (the number of deaths per 1000 people per unit time) remained high for months after the hurricane. This suggests that people continued to suffer even after the hurricane passed.
 -   Our data suggests that about one third of those that died after the hurricane died from delayed or interrupted medical care, as reported by the surveyed households.
 -   Even the low-bound of our estimates is consistent with earlier academic and press reports about the high mortality rate.
--   We intentionally used a simple method, but there are many ways to calculate excess deaths. We have made all data available and welcome other researchersâ analyses.
+-   We intentionally used a simple method, but there are many ways to calculate excess deaths. We have made all data available and welcome other researchers’ analyses.
 
 How many people died?
 ---------------------
@@ -33,7 +33,7 @@ No. We provide a 95% confidence interval of 793 to 8498, and 4645 falls in the m
 What is a confidence interval?
 ------------------------------
 
-We implemented an approach that generates a confidence interval that has a 95% chance of including the actual death count. We followed a standard statistical approach to calculate this interval. Our estimate is based on a random sample of the entire population. If we took a different random sample, and followed the same statistical approach, we would end up with a different interval due to random variability introduced by the sampling â because we would end up picking a different set of households. If one had unlimited resources, and continued to take random samples, 95% of the resulting confidence intervals would include the actual death count. All this requires certain assumptions to hold; some are described in our paper, others described in basic statistics textbooks.
+We implemented an approach that generates a confidence interval that has a 95% chance of including the actual death count. We followed a standard statistical approach to calculate this interval. Our estimate is based on a random sample of the entire population. If we took a different random sample, and followed the same statistical approach, we would end up with a different interval due to random variability introduced by the sampling — because we would end up picking a different set of households. If one had unlimited resources, and continued to take random samples, 95% of the resulting confidence intervals would include the actual death count. All this requires certain assumptions to hold; some are described in our paper, others described in basic statistics textbooks.
 
 Why is your confidence interval so large?
 -----------------------------------------
@@ -43,7 +43,7 @@ Deaths are relatively rare events. We were able to survey 3299 households and fo
 Why do you provide two confidence intervals?
 --------------------------------------------
 
-The first interval, 793 to 8498, is based on the raw rate. We noted that our survey was unable to capture the deaths of people that lived alone. The paper describes an attempt to adjust for this âbiasâ and we provide the confidence interval, 1506 to 9889, that is obtained after this adjustment.
+The first interval, 793 to 8498, is based on the raw rate. We noted that our survey was unable to capture the deaths of people that lived alone. The paper describes an attempt to adjust for this “bias” and we provide the confidence interval, 1506 to 9889, that is obtained after this adjustment.
 
 ![Figure 4a from the manuscript with labels added for the confidence intervals](../misc/faq_fig.png)
 
@@ -60,10 +60,10 @@ No, household based surveys for estimating mortality after disasters are a well 
 What does excess deaths mean?
 -----------------------------
 
-Excess deaths refers to the total number of deaths that exceeded the number one would expect in ânormalâ years over the same time period. This includes deaths from all causes. We compared our calculated the mortality rate to that in the same period in 2016 to account for seasonal variation. We also looked at the preceding six years, and found that the death rate remained mostly stable in prior years. See Figure S2 of our Supplement, accessible here: <https://www.nejm.org/doi/suppl/10.1056/NEJMsa1803972/suppl_file/nejmsa1803972_appendix.pdf>
+Excess deaths refers to the total number of deaths that exceeded the number one would expect in “normal” years over the same time period. This includes deaths from all causes. We compared our calculated the mortality rate to that in the same period in 2016 to account for seasonal variation. We also looked at the preceding six years, and found that the death rate remained mostly stable in prior years. See Figure S2 of our Supplement, accessible here: <https://www.nejm.org/doi/suppl/10.1056/NEJMsa1803972/suppl_file/nejmsa1803972_appendix.pdf>
 
-What are the names of the people that died? Why canât you tell us?
---------------------------------------------------------------------
+What are the names of the people that died? Why can’t you tell us?
+------------------------------------------------------------------
 
 It is standard practice to de-identify data before analysis to protect the identity of respondents. It is also a precondition to our study protocol being approved by the IRB (the ethics review board of the Harvard Chan school). This is the norm is such studies, and considered good and necessary practice to protect individuals from harm.
 
