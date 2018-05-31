@@ -35,6 +35,8 @@ Deaths are relatively rare events. We were able to survey 3299 households and fo
 ## Why do you provide two confidence intervals?
 The first interval, 793 to 8498, is based on the raw rate. We noted that our survey was unable to capture the deaths of people that lived alone. The paper describes an attempt to adjust for this “bias” and we provide the confidence interval, 1506 to 9889, that is obtained after this adjustment. 
 
+![Figure 4a from the manuscript with labels added for the confidence intervals](../misc/faq_fig.png)
+
 ## What does a household-based survey mean?
 We picked a representative random sample of households from across Puerto Rico. We divided all barrios in Puerto Rico into eight groups, based on how urban or remote they were, and randomly selected neighborhoods from each group. From each of the 104 selected neighborhoods, we then again randomly selected about 35 households per neighborhood. Additional details are discussed in the Supplement of our paper accessible here: https://www.nejm.org/doi/suppl/10.1056/NEJMsa1803972/suppl_file/nejmsa1803972_appendix.pdf
 
