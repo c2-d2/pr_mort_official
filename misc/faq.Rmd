@@ -1,9 +1,9 @@
 ---
 title: "Hurricane Maria Mortality Study FAQ"
 output: 
-  html_document: default
-  github_document: default
   pdf_document: default
+  github_document: default
+  html_document: default
 ---
 
 Hurricane Maria Mortality Study (NEJM online, Kishore et al., May 29 2018)
