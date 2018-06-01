@@ -5,7 +5,7 @@ Hurricane Maria Mortality Study (NEJM online, Kishore et al., May 29 2018)
 
 Available online: <https://www.nejm.org/doi/full/10.1056/NEJMsa1803972>
 
-Last updated: June 01, 2018
+Last updated: March 31, 2018
 
 Preguntas Frecuentes
 --------------------
