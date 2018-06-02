@@ -1,0 +1,142 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+## Adjusting for the missing households of size 1
+
+For this analysis we start by loading the data.
+
+```{r, message=FALSE}
+library(tidyverse)
+library(lubridate)
+dslabs::ds_theme_set()
+options(digits = 3)
+deaths <- readRDS("../data/rdata/deaths.RDS")
+households <- readRDS("../data/rdata/hh_main.RDS")
+individuals <- readRDS("../data/rdata/ind_hh.RDS")
+official <- readRDS("../data/rdata/official_long.RDS")
+```
+
+To adjust for the after period being shorter than the first we will adjust by dividing fraction of year rather than entire year:
+
+```{r}
+days_before_hurricane <- 
+  difftime(ymd("2017-09-20"), ymd("2016-12-31"), units = "days") %>% 
+  as.numeric() 
+years_before <- days_before_hurricane/365
+years_after <- (365 - days_before_hurricane) / 365
+```
+
+Now we are going to compute the before and after death rates by households as well as the median of the median ages of each household for each of these strata. We need to do a bit of data wrangling for this to summarize into the information we need:
+
+```{r}
+hh_stats <- households %>% 
+  dplyr::select(hh_id, hh_size) %>% 
+  filter(!is.na(hh_size) & hh_size>0) 
+
+hh_deaths <- deaths %>%
+  mutate(death_after = mo > 9.1 ) %>%
+  group_by(hh_id) %>%
+  summarize(tot_before = sum(!death_after), tot_after = sum(death_after)) %>%
+  ungroup()
+
+hh_deaths$hh_id <- as.numeric(hh_deaths$hh_id)
+hh_stats$hh_id <- as.numeric(hh_stats$hh_id)
+```
+
+Now we are ready to compute the per household size strata rates. We will divide into five strata to make sure that the death rates before are monotonically dropping which we know must be the case:
+
+```{r}
+rates_by_hh_size <- left_join(hh_stats, hh_deaths, by = "hh_id") %>%
+  mutate(household_size = cut(hh_size, c(0,1,2,4,Inf), labels = c("1","2","3-4","5+"))) %>%
+  group_by(household_size) %>%
+  summarize(total_households = n(),
+            N = sum(hh_size),
+            deaths_before = sum(tot_before, na.rm = TRUE),
+            deaths_after = sum(tot_after, na.rm = TRUE)) %>%
+  mutate(rate_before = deaths_before/N*1000 / years_before,
+         rate_after = deaths_after/N*1000 / years_after)
+rates_by_hh_size %>% knitr::kable()
+```
+
+A problem is that the death rate for household of size 1 is 0. This is an unavoidable bias in our approach: if the person in a one person household dies, there is no one left in the household to interview. A consequence of this bias is that underestimate death rates both before and after the hurricane.
+
+One conservative approach to adjust for this bias is to use to estimate this unobserved death rate with the 
+pre-hurricane official death rate and assume the hurricane had **no effect** and estimate the post hurricane death rate with this rate as well. Let's compute the before and after September 20 rates for each year:
+
+```{r}
+population_by_year <- readRDS("../data/rdata/deaths_official.RDS") %>%
+  dplyr::select(Year, Popv17)
+names(population_by_year) <- c("year","pop")
+days_in_month <- c(31,28,31,30,31,30,31,31,30,31,30,31)
+
+official_rates <- official %>% left_join(population_by_year, by = "year") %>%
+  mutate(days = days_in_month[month]) %>%
+  mutate(days = ifelse(year %% 4 == 0 & month ==2, days + 1, days)) %>%
+  mutate(rate = deaths / pop * 365/days * 1000) %>%
+  group_by(year) %>%
+  summarize(before_rate = sum(deaths*(month<9) + deaths*(month==9)*2/3) / pop[1] * 1000 *
+              sum(days)/(sum(days*(month<9))+20),
+            after_rate = sum(deaths*(month>9) + deaths*(month==9)*1/3) / pop[1] * 1000 *
+              sum(days)/(sum(days*(month>9))+10))
+```
+
+Let's quickly check the rate estimate (full estimate and CI in excess_est.R)
+
+```{r}
+pr_pop <- population_by_year %>% subset(year == 2016) %>% {.$pop}
+  
+res <- rates_by_hh_size %>% 
+  summarize(survey_deaths = sum(deaths_after), 
+            N = sum(N), 
+            rate = round(survey_deaths/N*1000/years_after,1))
+
+t(res) 
+```
+
+
+Now we will plug in the 2017 before rate for both before and after rates for the 1 person households:
+
+
+```{r}
+rates_by_hh_size_adj <- rates_by_hh_size
+rates_by_hh_size_adj$rate_before[1] <- rates_by_hh_size_adj$rate_after[1] <- 
+  official_rates %>%
+  filter(year == 2017) %>% 
+  .$before_rate
+rates_by_hh_size_adj %>% knitr::kable()
+```
+
+Now the above described limitation of the survey points to another bias: the probability of being included in our survey is higher for larger households as it more likely for someone to be home. This is confirmed by comparing ACS 2016 household size distribution to our surveys:
+
+```{r}
+load("../data/rdata/ACS2016.Rdata")
+household_dist <- acs.hh_size %>% 
+  mutate(hh_size = cut(hh_size, c(0,1,2,4,Inf), labels = c("1","2","3-4","5+"))) %>%
+  group_by(hh_size)%>%
+  summarize(count = sum(count)) %>%
+  ungroup() %>%
+  mutate(pop_freq = count / sum(count)) 
+```
+
+We can also adjust for this and obtain the following before and after rates:
+```{r}
+res_2 <- rates_by_hh_size_adj %>%  left_join(household_dist, by = c("household_size" = "hh_size")) 
+res_2 %>%
+  summarize(rate_before = sum(rate_before*pop_freq), 
+            se_before = sum(rate_before*pop_freq)/sqrt(sum(deaths_before)),
+            rate_after = sum(rate_after*pop_freq), 
+            se_after = sum(rate_after*pop_freq)/sqrt(sum(deaths_after))) %>%
+  mutate(lower_before = rate_before - 1.96*se_before, 
+         upper_before = rate_before+ 1.96*se_before,
+         lower_after = rate_after - 1.96*se_after, 
+         upper_after = rate_after+ 1.96*se_after) -> adj_rates
+
+saveRDS(adj_rates, "../data/rdata/adj_rates.RDS")
+
+t(adj_rates)
+```
+
+
+Note that the counts, both before and after, for smaller households are probably also under-counted. However, to properly adjust these we will need more sophisticated assumption dependent models. In this manuscript we want to report raw values acknowledging that these are underestimates. The adjutment increases the before rate substantially compared to the unadjusted value. 

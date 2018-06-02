@@ -8,6 +8,7 @@ hh_main <- readRDS("../data/rdata/hh_main.RDS")
 deaths <- readRDS("../data/rdata/deaths.RDS")
 deaths_official <- readRDS("../data/rdata/deaths_official.RDS")
 weighted_pop_est <- readRDS("../data/rdata/pop_est.RDS")
+adj_rates <- readRDS("../data/rdata/adj_rates.RDS")
 
 #raw data
 deaths_after_hurricane <- 
@@ -58,9 +59,10 @@ weighted_pop_est*(102/365)*diff_ul
 
 
 #adjusted calculations
-adj_rate <- 15.6/1000
-adj_ll <- 11.47996489/1000
-adj_ul <- 19.62751111/1000
+#generated in adjust-for-missing-households.RMD
+adj_rate <- round(adj_rates$rate_after,1) / 1000
+adj_ll <- round(adj_rates$lower_after,1) / 1000
+adj_ul <- round(adj_rates$upper_after,1) / 1000
 
 #excess deaths calculation
 weighted_pop_est*(102/365)*(adj_rate-rate_2016)

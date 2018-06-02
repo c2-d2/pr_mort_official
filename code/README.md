@@ -3,6 +3,9 @@
 
 -`/figures/figure-s1.pdf` was generated using QGIS, the creation of this simulation is explained, but script for reproduction is not included in this repository. QGIS project files are available upon request. 
 
+- `excess_est.R` calculates the main and adjusted rate 
+- `adjust-for-missing-households.R` walks through the adjustment used for deaths in single person households and the decreased probability of capturing households that were smaller in size 
+
 # Correspondence
 For any issues with anonymization or major issues with the functionality of the script please create an issue
 
