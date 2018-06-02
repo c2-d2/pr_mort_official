@@ -10,7 +10,7 @@ Hurricane Maria Mortality Study (NEJM online, Kishore et al., May 29 2018)
 
 Available online: https://www.nejm.org/doi/full/10.1056/NEJMsa1803972
 
-Last updated: `r format(Sys.time(), "%B %d, %Y")`
+Last updated: May 31, 2018
 
 ## Preguntas Frecuentes
 Los autores prepararon este documento para responder a preguntas frecuentes que recibimos. 

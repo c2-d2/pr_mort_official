@@ -1,8 +1,8 @@
 ---
 title: "Hurricane Maria Mortality Study FAQ"
 output: 
-  github_document: default
   pdf_document: default
+  github_document: default
   html_document: default
 ---
 
@@ -10,7 +10,7 @@ Hurricane Maria Mortality Study (NEJM online, Kishore et al., May 29 2018)
 
 Available online: https://www.nejm.org/doi/full/10.1056/NEJMsa1803972
 
-Last updated: `r format(Sys.time(), "%B %d, %Y")`
+Last updated: May 31, 2018
 
 ## FAQs
 In response to the overwhelming media response and inquiries, the authors have prepared this document to answer frequently asked questions.
