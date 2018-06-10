@@ -1,0 +1,189 @@
+             Defunciones por género y mes de ocurrencia, Puerto Rico: año 2017
+
+                                                      Género
+
+Mes                                    Femenino                   Masculino   Total
+
+Enero                                     1,364                      1,530    2,894
+
+Febrero                                   1,040                      1,275    2,315
+
+Marzo                                     1,127                      1,367    2,494
+
+Abril                                     1,066                      1,326    2,392
+
+Mayo                                      1,110                      1,280    2,390
+
+Junio                                     1,019                      1,350    2,369
+
+Julio                                     1,114                      1,253    2,367
+
+Agosto                                    1,069                      1,252    2,321
+
+Septiembre                                1,327                      1,601    2,928
+
+Octubre                                   1,437                      1,603    3,040
+
+Noviembre                                 1,236                      1,435    2,671
+
+Diciembre                                 1,235                      1,585    2,820
+
+Total                                     14,144                    16,857    31,001
+Fuente: Registro Demográfico y Estadísticas Vitales, Departamento de Salud
+Fecha del archivo: 31 de mayo de 2018
+                                               Defunciones por grupos de edad y mes de ocurrencia, Puerto Rico: año 2017
+
+                                                                                Grupo de Edad
+
+                                                                                                                                        80 años y
+Mes               0-9 años      10-19 años        20-29 años       30-39 años    40-49 años     50-59 años   60-69 años    70-79 años      más      Total
+
+Enero                19               4                44               65           113           231          470           660         1,288     2,894
+
+Febrero              19               7                45               57           88            189          345           522         1,043     2,315
+
+Marzo                17               5                47               63           107           203          361           617         1,074     2,494
+
+Abril                18              16                50               61           99            203          324           593         1,028     2,392
+
+Mayo                 13              10                54               58           92            229          344           539         1,051     2,390
+
+Junio                25              13                55               66           104           209          356           561         980       2,369
+
+Julio                23               8                57               63           115           188          386           522         1,005     2,367
+
+Agosto               17              11                42               52           88            216          350           550         995       2,321
+
+Septiembre           14               6                45               70           102           246          433           740         1,272     2,928
+
+Octubre              15              11                69               79           116           221          405           688         1,436     3,040
+
+Noviembre            20              15                39               57           92            241          416           610         1,181     2,671
+
+Diciembre            11              11                68               68           112           244          405           632         1,269     2,820
+
+Total                 211            117                615              759        1,228         2,620        4,595         7,234       13,622     31,001
+Fuente: Registro Demográfico y Estadísticas Vitales , Departamento de Salud
+Fecha de archivo: 31 de mayo de 2017
+                                                  DEFUNCIONES POR MES Y LUGAR DE DEFUNCION, PUERTO RICO: AÑO 2017
+
+
+                                                                              LUGAR DE LA DEFUNCION
+
+
+
+                                                   ASILO/CASA DE                              MUERTO AL LLEGAR A
+                  AMBULATORIO/SALA DE             SALUD/FACILIDAD                                 FACILIDAD                 RESIDENCIA DE LA
+MES                   EMERGENCIA               CIUIDADO PROLONGADO            HOSPITALIZADO      HOSPITALARIA      OTRO    PERSONA FALLECIDA   TOTAL
+ENERO                        173                          256                     1,345               17           155            948          2,894
+FEBRERO                      113                          181                     1,065               15           133            808          2,315
+MARZO                        143                          219                     1,135               14           135            848          2,494
+ABRIL                        115                          207                     1,077               10           136            847          2,392
+MAYO                         109                          212                     1,061               15           153            840          2,390
+JUNIO                        143                          209                      991                10           168            848          2,369
+JULIO                        140                          171                      987                 9           159            901          2,367
+AGOSTO                       126                          222                      968                 8           126            871          2,321
+SEPTIEMBRE                   165                          276                     1,264               24           202            997          2,928
+OCTUBRE                      194                          297                     1,385               16           240            908          3,040
+NOVIEMBRE                    173                          233                     1,279               16           162            808          2,671
+DICIEMBRE                    175                          257                     1,298               16           191            883          2,820
+TOTAL                       1,769                         2,740                   13,855              170          1,960         10,507        31,001
+Fuente: Registro Demográfico y Estadísticas Vitales , Departamento de Salud
+Fecha de archivo: 31 de mayo de 2017
+                                                        Defunciones por mes de ocurrencia y causa de muerte, Puerto Rico: año 2017
+
+                                                                                                     Mes de Ocurrencia
+Causa de Muerte                                         ENE      FEB      MAR      ABR       MAY      JUN        JUL     AGO         SEP   OCT   NOV   DIC   TOTAL
+
+Tuberculosis (A16-A19)                                   2        0         0        1        0         0         0       1           0     0     0     1      5
+
+Septicemia (A40-A41)                                    85        53       69       56        63       54        42       49         101   96    96    71     835
+
+Sifilis (A50-A53)                                        0        0         1        0        0         0         0       0           2     0     0     0      3
+
+Hepatitis viral (B15-B19)                                9        1         6        5        8         5         4       5           5    10     5     8     71
+Enfermedad por virus de la inmunodeficiencia -humana
+(VIH) (B20–B24)                                         18        19       22       14        11       16        24       11         13    10    11    11     180
+
+Tumores [neoplasias] malignos (C00-C97)                 423      384       503      449      432       438       416     462         480   440   412   394   5,233
+Tumor in situ, benignos y de comportamiento
+desconocido (D00-D48)                                   13        14       13       15        17       21        10       8          10    15     7    13     156
+
+Anemias (D50-D64)                                       25        14       22       23        17       14        15       15         24    23    13    15     220
+
+Diabetes mellitus (E10-E14)                             319      260       239      236      228       236       278     217         351   315   282   287   3,248
+
+Deficiencias nutricionales (E40-E64)                    10        6         7       11        8         3         4       5           8     8    10    11     91
+
+Meningitis (G00, G03)                                    0        0         0        0        0         0         0       0           0     0     1     1      2
+
+Enfermedad de Parkinson (G20-G21)                       14        16       13       19        16       11        13       14         22    17    17    16     188
+
+Enfermedad de Alzheimer (G30)                           203      169       164      169      189       170       164     196         228   257   214   220   2,343
+
+Enfermedades del corazón (I00-I09, I11, I13, I20-I51)   534      417       438      423      418       434       392     405         527   584   466   547   5,585
+Enfermedades hipertensivas y enfermades renales
+hipertensas (I10, I12, I15)                             53        40       52       34        45       38        36       34         59    75    53    51     570
+
+Enfermedades cerebrovasculares (I60–I69)                113      106       88       104       87       94        91      108         86    124   120   99    1,220
+
+Aterosclerosis (I70)                                     3        0         0        2        2         3         0       0           1     1     1     2     15
+
+Aneurisma y disección aórticos (I71)                     5        3         5        2        7         6         4       7           4     2     6     2     53
+                                                         Defunciones por mes de ocurrencia y causa de muerte, Puerto Rico: año 2017
+
+                                                                                                      Mes de Ocurrencia
+Causa de Muerte                                          ENE      FEB      MAR      ABR       MAY      JUN        JUL     AGO         SEP   OCT   NOV   DIC   TOTAL
+
+Neumonía e influenza (J09-J21)                           77        62       60       38        60       54        59       60         81    84    85    101    821
+
+Bronquitis aguda y bronquiliotis (J20-J21)                0        0         2        1        0        0          2       0           0     2     0     2      9
+Enfermedades crónicas de las vías respiratorias
+inferiores (CLRD) (J40-J47)                              120       91       101      87        93       71        88       82         102   123   104   120   1,182
+
+Neumonitis debida a sólidos y líquidos (J69)             12        20       20       13        14       14        20       21         28    25    25    23     235
+
+Úlcera péptica (K25-K28)                                  1        0         1        1        2        1          4       3           4     0     2     4     23
+
+Enfermedades del apéndice (K35-K38)                       0        0         1        0        3        0          0       0           1     1     0     0      6
+
+Hernia (K40-K46)                                          2        1         2        2        2        0          2       2           2     5     1     1     22
+Enfermedades crónicas del hígado y cirrosis (K70, K73-
+K74)                                                     31        20       20       24        31       18        27       29         15    26    13    40     294
+Colelitiasis y otras enfermedades de la vesícula (K80-
+K82)                                                      3        6         3        5        2        3          3       4           3     3     4     1     40
+Nefritis, sindróme nefrótico y nefrosis (N00-N07, N17-
+N19, N25-N27)                                            89        75       66       69        66       60        74       65         84    94    69    85     896
+
+Infecciones del riñón (N10-N12, N13.6, N15.1)             2        1         0        0        0        1          0       1           1     0     1     3     10
+
+Hiperplasia de la próstata (N40)                          1        0         0        1        3        0          1       0           1     0     0     1      8
+Enfermedades inflamatorias de los órganos pélvicos
+femeninos (N70–N76)                                       0        0         0        0        1        0          0       0           2     0     0     0      3
+
+Embarazo, parto y puerperio (O00-O99)                     0        0         1        0        2        2          0       1           0     2     0     0      8
+Ciertas afecciones originadas en el período perinatal
+(P00–P96)                                                11        8         7        7        8        17         8       5           5     9     9     5     99
+Malformaciones congénitas, deformidades y anomalías
+cromosómicas (Q00–Q99)                                    4        13       10        7        2        5          9       6          11     3    11    11     92
+Accidentes (lesiones no intencionales) (V01-X59, Y85-
+Y86)                                                     88        67       71       78        88       73        75       75         79    81    92    98     965
+Lesión autoinfligida intencionalmente [suicidio] (X60-
+X84, Y87 0, *U03)                                        27        8        16       18        27       18        22       15         26    23    26    20     246
+                                                          Defunciones por mes de ocurrencia y causa de muerte, Puerto Rico: año 2017
+
+                                                                                                       Mes de Ocurrencia
+Causa de Muerte                                           ENE         FEB     MAR     ABR      MAY      JUN        JUL     AGO         SEP     OCT     NOV     DIC     TOTAL
+
+Homicidios (X85-Y09, Y87.1,*U01-*U02)                      55          51      55      56       55       74        62       52          47      66      49      65      687
+Complicaciones de cuidado médico y quirúrgico (Y40-
+Y84, Y88)                                                  13           7      14      9        3         9         9       6           17      17      8       7       119
+
+Otras causas                                              528         383     401     412      378       404       408     357         494     498     452     483     5,198
+
+No esp.                                                    1            0      1       1        2         2         1       0           4       1       6       1       20
+
+Total                                                    2,894        2,315   2,494   2,392   2,390     2,369     2,367    2,321       2,928   3,040   2,671   2,820   31,001
+Fuente: Registro Demográfico y Estadísticas Vitales, Departamento de Salud
+Fecha del archivo: 31 de mayo de 2018
+
