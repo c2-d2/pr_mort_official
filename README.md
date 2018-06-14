@@ -9,6 +9,12 @@ Here we provide the data and pipeline for:  [**Mortality in Puerto Rico after Hu
 1) [FAQs](https://github.com/c2-d2/pr_mort_official/blob/master/misc/faq.md) [[PDF](https://github.com/c2-d2/pr_mort_official/blob/master/misc/faq.pdf)]   —   ([Spanish](https://github.com/c2-d2/pr_mort_official/blob/master/misc/faq_sp.md) [[PDF](https://github.com/c2-d2/pr_mort_official/blob/master/misc/faq_sp.pdf)])
 2) [Responses to Inquiries](https://htmlpreview.github.io/?https://github.com/c2-d2/pr_mort_official/blob/master/misc/inquiries.html) [[PDF](https://github.com/c2-d2/pr_mort_official/blob/master/misc/inquiries.pdf)]
 
+# Repository at time of publication
+
+This repository is constantly being updated in response to feedback and inquiries; however, all code will remain entirely reproducible at any point in the commit history.
+
+For full transparency, we wanted to note what the repository looked like before we made additional changes. Thus, the paper release is the version of the repository that existed at the original time of publication. You can get this release by downloading it or using `git checkout paper` in your local repository.
+
 # Abstract
 
 **Background:** 
