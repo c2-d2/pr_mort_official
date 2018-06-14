@@ -55,7 +55,8 @@ Health and others.)
 - `misc` — Folder with a Spanish version of the paper as well as an `xml` file with the survey instrument used to gather data.
 
 # Use
-- `master` is locked  
+- `master` is locked 
+- We have tagged the version of this repository *at the time of publication* under the [`paper` release](https://github.com/c2-d2/pr_mort_official/releases)
 - Feel free to create a new branch for further incorporation and analysis  
 - All geospatial data has been stripped; by using this dataset, you agree to not undertake any steps to identify any respondents or their families
 - More information in `data`
