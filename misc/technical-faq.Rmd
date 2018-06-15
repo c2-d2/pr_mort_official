@@ -1,9 +1,9 @@
 ---
 output:
-  html_document:
-    df_print: paged
   pdf_document: default
   github_document: default
+  html_document:
+    df_print: paged
 ---
 
 Hurricane Maria Mortality Study (NEJM online, Kishore et al., May 29 2018)
